@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<st86:Transaction xmlns:st86="http://www.wipo.int/standards/XMLSchema/designs"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:fr="http://www.inpi.fr/standards/XMLSchema/designs"
+	xsi:schemaLocation="
+	  http://www.wipo.int/standards/XMLSchema/designs schemas/st86model-V1-0.xsd 
+	  http://www.inpi.fr/standards/XMLSchema/designs schemas/st86model-V1.0-fr.xsd
+	  ">
+	<st86:TransactionHeader>
+		<st86:SenderDetails />
+		<st86:ReceiverDetails />
+	</st86:TransactionHeader>
+	<st86:DesignTransactionBody>
+		<st86:TransactionContentDetails>
+			<st86:TransactionCode>Request Registration</st86:TransactionCode>
+			<st86:TransactionData>
+				<st86:DesignRecordDetails>
+					<st86:DesignRecord>
+						<st86:DesignBasicRecord>
+							<st86:BasicRecordKind>Correction</st86:BasicRecordKind>
+							<st86:RecordEventDetails>
+								<st86:RecordEvent>
+									<st86:RecordEventCode>
+										To Check
+									</st86:RecordEventCode>
+								</st86:RecordEvent>
+							</st86:RecordEventDetails>
+						</st86:DesignBasicRecord>
+					</st86:DesignRecord>
+				</st86:DesignRecordDetails>
+			</st86:TransactionData>
+		</st86:TransactionContentDetails>
+	</st86:DesignTransactionBody>
+</st86:Transaction>

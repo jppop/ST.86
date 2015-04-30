@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<st86:Transaction xmlns:st86="http://www.wipo.int/standards/XMLSchema/designs"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fr="http://www.inpi.fr/standards/XMLSchema/designs"
+	xsi:schemaLocation="http://www.wipo.int/standards/XMLSchema/designs schemas/st86model-V1-0.xsd http://www.inpi.fr/standards/XMLSchema/designs schemas/st86model-V1.0-fr.xsd ">
+	<st86:DesignTransactionBody>
+		<st86:TransactionContentDetails>
+			<st86:TransactionCode>Change of Name</st86:TransactionCode>
+			<st86:TransactionSubCode>Accelerated Registration</st86:TransactionSubCode>
+			<st86:TransactionData>
+				<st86:DesignRecordDetails>
+					<st86:DesignRecord>
+						<st86:RecordChangeNameAddress>
+							<st86:RecordIdentifier>urn:inpi:record:FR201501-02930</st86:RecordIdentifier>
+							<st86:RecordChangeNameAddressKind>Change Applicant Name or Address</st86:RecordChangeNameAddressKind>
+							<st86:DesignKeyDetails>
+								<st86:DesignKey>
+									<st86:Identifier>urn:bpi:design:20150675-0001</st86:Identifier></st86:DesignKey>
+							</st86:DesignKeyDetails>
+							<st86:ClaimantDetails>
+								<st86:ClaimantKey>
+									<st86:Identifier>urn:ets:person:FR0020150675-01</st86:Identifier></st86:ClaimantKey>
+							</st86:ClaimantDetails>
+							<st86:CorrespondenceAddress>
+								<st86:CorrespondenceAddressIdentifier>urn:ets:person:FR2015-980980</st86:CorrespondenceAddressIdentifier></st86:CorrespondenceAddress>
+							<st86:HolderDetails>
+								<st86:NewHolder>
+									<st86:ApplicantIdentifier>urn:bpi:person:90801-0912</st86:ApplicantIdentifier>
+									<st86:ApplicantNationalityCode>FR</st86:ApplicantNationalityCode>
+									<st86:ApplicantLegalEntity>Legal Entity</st86:ApplicantLegalEntity>
+									<st86:ApplicantAddressBook>
+										<st86:FormattedNameAddress>
+											<st86:Name>
+												<st86:FormattedName>
+													<st86:LastName>La Poste</st86:LastName>
+												</st86:FormattedName>
+											</st86:Name>
+											<st86:Address>
+												<st86:FormattedAddress>
+													<st86:AddressLine>44 boulevard de Vaugirard</st86:AddressLine>
+													<st86:AddressCity>PARIS</st86:AddressCity>
+													<st86:AddressPostcode>75015</st86:AddressPostcode>
+												</st86:FormattedAddress>
+											</st86:Address>
+										</st86:FormattedNameAddress>
+									</st86:ApplicantAddressBook>
+									<fr:LegalEntityKind>Société Anonyme</fr:LegalEntityKind>
+								</st86:NewHolder>
+							</st86:HolderDetails>
+						</st86:RecordChangeNameAddress>
+					</st86:DesignRecord>
+				</st86:DesignRecordDetails>
+			</st86:TransactionData>
+		</st86:TransactionContentDetails>
+	</st86:DesignTransactionBody>
+</st86:Transaction>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.inpi.fr/standards/XMLSchema/designs"
+	xmlns:tns="http://www.inpi.fr/standards/XMLSchema/designs"
+	elementFormDefault="qualified">
+
+	<xs:element name="DesignerName" type="xs:string" />
+
+    <xs:element name="ViewSequenceNumber" type="xs:string"></xs:element>
+    <xs:element name="LegalEntityKind" type="tns:LegalEntityKindType" />
+    <xs:element name="SignatoryCapacityDetails" type="tns:SignatoryCapacityDetailsType"></xs:element>
+
+    <xs:element name="ApplicationAreaExtension">
+    	<xs:complexType>
+    		<xs:sequence minOccurs="1" maxOccurs="unbounded">
+    			<xs:element name="extension" type="tns:ApplicationAreaExtensionType" />
+    		</xs:sequence>
+    	</xs:complexType>
+    </xs:element>
+
+    <xs:element name="ApplicationTimeExtension">
+    	<xs:complexType>
+    		<xs:sequence minOccurs="1" maxOccurs="unbounded">
+    			<xs:element name="extension" type="tns:PeriodType" />
+    		</xs:sequence>
+    	</xs:complexType>
+    </xs:element>
+
+    <xs:simpleType name="ApplicationAreaExtensionType">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="Polynésie Française"/>
+			<xs:enumeration value="Nouvelle Calédonie"/>
+		</xs:restriction>
+    </xs:simpleType>
+
+	<xs:complexType name="SignatoryCapacityDetailsType">
+		<xs:sequence>
+			<xs:element name="RepresentativeDetail" type="tns:RepresentativeType" />
+			<xs:element name="RepresentativeIdentifier" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+
+    <xs:simpleType name="RepresentativeType">
+ 		<xs:union memberTypes="xs:token">
+			<xs:simpleType>
+				<xs:restriction base="xs:token">
+		    		<xs:enumeration value="CPI" />
+		    		<xs:enumeration value="L422-5" />
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+    </xs:simpleType>
+
+    <xs:simpleType name="LegalEntityKindType">
+ 		<xs:union memberTypes="xs:token">
+			<xs:simpleType>
+				<xs:restriction base="xs:token">
+		    		<xs:enumeration value="SA" />
+		    		<xs:enumeration value="Société Anonyme" />
+		    		<xs:enumeration value="SAS" />
+		    		<xs:enumeration value="EURL" />
+		    		<xs:enumeration value="Association" />
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+    </xs:simpleType>
+
+	<xs:simpleType name="PeriodCodeType">
+		<xs:union memberTypes="xs:token">
+			<xs:simpleType>
+				<xs:restriction base="xs:token">
+					<xs:enumeration value="InYear"/>
+					<xs:enumeration value="InMonth"/>
+					<xs:enumeration value="InWeek"/>
+					<xs:enumeration value="InDay"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	
+	<xs:complexType name="PeriodType">
+		<xs:simpleContent>
+			<xs:extension base="xs:positiveInteger">
+				<xs:attribute name="periodCode" type="tns:PeriodCodeType" use="optional"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+</xs:schema>
