@@ -2,8 +2,12 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
 	targetNamespace="http://www.inpi.fr/standards/XMLSchema/designs"
 	xmlns:tns="http://www.inpi.fr/standards/XMLSchema/designs"
+	xmlns:st86="http://www.wipo.int/standards/XMLSchema/designs"
 	elementFormDefault="qualified">
 
+	<xs:import namespace="http://www.wipo.int/standards/XMLSchema/designs"  schemaLocation="st86model-V1-0.xsd" />
+	<xs:include schemaLocation="RecordKind.xsd"/>
+	
 	<xs:element name="DesignerName" type="xs:string" />
 
     <xs:element name="ViewSequenceNumber" type="xs:string"></xs:element>
@@ -21,10 +25,16 @@
     <xs:element name="ApplicationTimeExtension">
     	<xs:complexType>
     		<xs:sequence minOccurs="1" maxOccurs="unbounded">
-    			<xs:element name="extension" type="tns:PeriodType" />
+    			<xs:element name="extension" type="st86:PeriodType" />
     		</xs:sequence>
     	</xs:complexType>
     </xs:element>
+
+    <xs:element name="RecordKind" type="tns:RecordKindListType" />
+
+    <xs:simpleType name="RecordKindListType">
+		<xs:list itemType="tns:RecordKindType" />
+    </xs:simpleType>
 
     <xs:simpleType name="ApplicationAreaExtensionType">
 		<xs:restriction base="xs:token">
@@ -65,24 +75,4 @@
 		</xs:union>
     </xs:simpleType>
 
-	<xs:simpleType name="PeriodCodeType">
-		<xs:union memberTypes="xs:token">
-			<xs:simpleType>
-				<xs:restriction base="xs:token">
-					<xs:enumeration value="InYear"/>
-					<xs:enumeration value="InMonth"/>
-					<xs:enumeration value="InWeek"/>
-					<xs:enumeration value="InDay"/>
-				</xs:restriction>
-			</xs:simpleType>
-		</xs:union>
-	</xs:simpleType>
-	
-	<xs:complexType name="PeriodType">
-		<xs:simpleContent>
-			<xs:extension base="xs:positiveInteger">
-				<xs:attribute name="periodCode" type="tns:PeriodCodeType" use="optional"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
 </xs:schema>

@@ -29,8 +29,16 @@
 								<st86:DesignIdentifier>urn:inpi:design:20152801-001</st86:DesignIdentifier>
 								<st86:DesignTitle>??? st86:DesignTitle ???</st86:DesignTitle>
 								<st86:DesignDescription>Luminaire "dents de loup" réalisé avec des crochets de boucher et une dalle LED lumineuse</st86:DesignDescription>
+								<st86:PublicationDefermentIndicator>
+									true
+								</st86:PublicationDefermentIndicator>
+								<st86:DefermentPeriod
+									periodCode="InMonth">30</st86:DefermentPeriod>
 								<st86:ColourIndicator>true</st86:ColourIndicator>
 								<st86:PublicationInColourIndicator>true</st86:PublicationInColourIndicator>
+								<st86:ImmediatePublicationIndicator>
+									true
+								</st86:ImmediatePublicationIndicator>
 								<st86:TotalRepresentationSheet>3</st86:TotalRepresentationSheet>
 								<st86:TotalColourView>1</st86:TotalColourView>
 								<st86:TotalBWView>2</st86:TotalBWView>

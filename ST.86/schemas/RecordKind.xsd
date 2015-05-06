@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns="http://www.wipo.int/standards/XMLSchema/common" version="1.0"
+	elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+	<xs:simpleType name="RecordKindType">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="AM" />
+			<xs:enumeration value="AN" />
+			<xs:enumeration value="AP" />
+			<xs:enumeration value="AV" />
+			<xs:enumeration value="CA" />
+			<xs:enumeration value="CD" />
+			<xs:enumeration value="CL" />
+			<xs:enumeration value="CN" />
+			<xs:enumeration value="DC" />
+			<xs:enumeration value="DE" />
+			<xs:enumeration value="DF" />
+			<xs:enumeration value="DJ" />
+			<xs:enumeration value="DN" />
+			<xs:enumeration value="DV" />
+			<xs:enumeration value="EM" />
+			<xs:enumeration value="ER" />
+			<xs:enumeration value="EX" />
+			<xs:enumeration value="GC" />
+			<xs:enumeration value="GR" />
+			<xs:enumeration value="IM" />
+			<xs:enumeration value="IR" />
+			<xs:enumeration value="MS" />
+			<xs:enumeration value="PC" />
+			<xs:enumeration value="PP" />
+			<xs:enumeration value="PT" />
+			<xs:enumeration value="RA" />
+			<xs:enumeration value="RI" />
+			<xs:enumeration value="RL" />
+			<xs:enumeration value="RP" />
+			<xs:enumeration value="RR" />
+			<xs:enumeration value="RT" />
+			<xs:enumeration value="SN" />
+			<xs:enumeration value="TO" />
+			<xs:enumeration value="VA" />
+			<xs:enumeration value="VP" />
+		</xs:restriction>
+	</xs:simpleType>
+
+</xs:schema>
+

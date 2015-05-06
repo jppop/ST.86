@@ -5,7 +5,6 @@
 	<st86:DesignTransactionBody>
 		<st86:TransactionContentDetails>
 			<st86:TransactionCode>Change of Name</st86:TransactionCode>
-			<st86:TransactionSubCode>CA</st86:TransactionSubCode>
 			<st86:TransactionData>
 				<st86:DesignRecordDetails>
 					<st86:DesignRecord>
@@ -19,6 +18,7 @@
 									<st86:Identifier>urn:inpi:design:20150675-0002</st86:Identifier></st86:DesignKey>
 							</st86:DesignKeyDetails>
 						</st86:RecordChangeNameAddress>
+						<fr:RecordKind>CA</fr:RecordKind>
 					</st86:DesignRecord>
 				</st86:DesignRecordDetails>
 			</st86:TransactionData>

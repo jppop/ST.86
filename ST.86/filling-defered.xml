@@ -22,18 +22,20 @@
 						<st86:FilingPlace>INPI/ETS</st86:FilingPlace>
 						<st86:DesignApplicationReference>JOLIDESSIN</st86:DesignApplicationReference>
 						<st86:DesignApplicationLanguageCode>fr</st86:DesignApplicationLanguageCode>
-						<st86:TotalDesign>1</st86:TotalDesign>
+						<st86:TotalDesign>2</st86:TotalDesign>
 						<st86:CorrespondenceLanguageCode>fr</st86:CorrespondenceLanguageCode>
 						<st86:DesignDetails>
 							<st86:Design>
 								<st86:DesignIdentifier>urn:inpi:design:20152801-001</st86:DesignIdentifier>
 								<st86:DesignTitle>??? st86:DesignTitle ???</st86:DesignTitle>
 								<st86:DesignDescription>Luminaire "dents de loup" réalisé avec des crochets de boucher et une dalle LED lumineuse</st86:DesignDescription>
-								<st86:ColourIndicator>true</st86:ColourIndicator>
-								<st86:PublicationInColourIndicator>true</st86:PublicationInColourIndicator>
-								<st86:TotalRepresentationSheet>3</st86:TotalRepresentationSheet>
-								<st86:TotalColourView>1</st86:TotalColourView>
-								<st86:TotalBWView>2</st86:TotalBWView>
+								<st86:PublicationDefermentIndicator>true</st86:PublicationDefermentIndicator>
+								<st86:DefermentPeriod periodCode="InYear">3</st86:DefermentPeriod>
+								<st86:ColourIndicator>false</st86:ColourIndicator>
+								<st86:PublicationInColourIndicator>false</st86:PublicationInColourIndicator>
+								<st86:ImmediatePublicationIndicator>false</st86:ImmediatePublicationIndicator>
+								<st86:TotalRepresentationSheet>1</st86:TotalRepresentationSheet>
+								<st86:TotalBWView>1</st86:TotalBWView>
 								<st86:DesignRepresentationSheetDetails>
 									<st86:DesignRepresentationSheet>
 										<st86:RepresentationSheetFilename>repsheet-20152801-001-01.pdf</st86:RepresentationSheetFilename>
@@ -55,43 +57,69 @@
 											</st86:View>
 										</st86:ViewDetails>
 									</st86:DesignRepresentationSheet>
+								</st86:DesignRepresentationSheetDetails>
+								<st86:IndicationProductDetails>
+									<st86:IndicationProduct>
+										<st86:ClassDescriptionDetails>
+											<st86:ClassDescription>
+												<st86:ClassNumber>9999</st86:ClassNumber><!--non attribué au 
+													dépôt -->
+											</st86:ClassDescription>
+										</st86:ClassDescriptionDetails>
+									</st86:IndicationProduct>
+								</st86:IndicationProductDetails>
+								<st86:ApplicantDetails>
+									<st86:ApplicantKey>
+										<st86:Identifier>urn:siren:person:532 748 050</st86:Identifier><!--Le 
+											déposant est désigné globalement pour le dépôt. Non nécessaire ici -->
+									</st86:ApplicantKey>
+
+
+								</st86:ApplicantDetails>
+								<st86:RepresentativeDetails>
+									<st86:RepresentativeKey>
+										<st86:Identifier>Cabinet Orion</st86:Identifier>
+									</st86:RepresentativeKey>
+
+									<!--Le mandataire est désigné globalement pour le dépôt. Non nécessaire 
+										ici -->
+								</st86:RepresentativeDetails>
+								<st86:DesignerDetails>
+									<st86:Designer>
+										<fr:DesignerName>Philippe Le Stagiaire</fr:DesignerName>
+									</st86:Designer>
+
+								</st86:DesignerDetails>
+							</st86:Design>
+							<st86:Design>
+								<st86:DesignIdentifier>urn:inpi:design:20152801-002</st86:DesignIdentifier>
+								<st86:DesignTitle>??? st86:DesignTitle ???</st86:DesignTitle>
+								<st86:DesignDescription>Luminaire "dents de loup" réalisé avec des crochets de boucher et une dalle LED lumineuse</st86:DesignDescription>
+								<st86:PublicationDefermentIndicator>true</st86:PublicationDefermentIndicator>
+								<st86:DefermentPeriod periodCode="InYear">3</st86:DefermentPeriod>
+								<st86:ColourIndicator>false</st86:ColourIndicator>
+								<st86:PublicationInColourIndicator>false</st86:PublicationInColourIndicator>
+								<st86:ImmediatePublicationIndicator>false</st86:ImmediatePublicationIndicator>
+								<st86:TotalRepresentationSheet>1</st86:TotalRepresentationSheet>
+								<st86:TotalBWView>1</st86:TotalBWView>
+								<st86:DesignRepresentationSheetDetails>
 									<st86:DesignRepresentationSheet>
-										<st86:RepresentationSheetFilename>view-20152801-001-02.pdf</st86:RepresentationSheetFilename>
-										<st86:RepresentationSheetFileFormat>PDF</st86:RepresentationSheetFileFormat>
+										<st86:RepresentationSheetFilename>repsheet-20152801-001-01.pdf</st86:RepresentationSheetFilename>
+										<st86:RepresentationSheetFileFormat>Other</st86:RepresentationSheetFileFormat>
 										<st86:RepresentationSheetColourIndicator>false</st86:RepresentationSheetColourIndicator>
 										<st86:ViewDetails>
 											<st86:View>
-												<st86:ViewFilename>view-20152801-001-02.jpeg</st86:ViewFilename>
+												<st86:ViewFilename>view-20152801-001-01.jpeg</st86:ViewFilename>
 												<st86:ViewFileFormat>JPEG</st86:ViewFileFormat>
-												<st86:ViewTitle>Vue de détail du luminaire</st86:ViewTitle>
+												<st86:ViewTitle>Vue en perspective du luminaire</st86:ViewTitle>
 												<st86:ViewColourIndicator>false</st86:ViewColourIndicator>
 												<st86:ViewKind>Image</st86:ViewKind>
 												<st86:ViewRepresentationSize>
-													<st86:Height>275</st86:Height>
+													<st86:Height>351</st86:Height>
 													<st86:Width>498</st86:Width>
 													<st86:Unit>Pixel</st86:Unit>
 												</st86:ViewRepresentationSize>
-												<fr:ViewSequenceNumber>2</fr:ViewSequenceNumber>
-											</st86:View>
-										</st86:ViewDetails>
-									</st86:DesignRepresentationSheet>
-									<st86:DesignRepresentationSheet>
-										<st86:RepresentationSheetFilename>repsheet-20152801-001-03.jpeg</st86:RepresentationSheetFilename>
-										<st86:RepresentationSheetFileFormat>PDF</st86:RepresentationSheetFileFormat>
-										<st86:RepresentationSheetColourIndicator>true</st86:RepresentationSheetColourIndicator>
-										<st86:ViewDetails>
-											<st86:View>
-												<st86:ViewFilename>view-20152801-001-03.pdf</st86:ViewFilename>
-												<st86:ViewFileFormat>JPEG</st86:ViewFileFormat>
-												<st86:ViewTitle>Luminaire vue de dessous</st86:ViewTitle>
-												<st86:ViewColourIndicator>true</st86:ViewColourIndicator>
-												<st86:ViewKind>Image</st86:ViewKind>
-												<st86:ViewRepresentationSize>
-													<st86:Height>470</st86:Height>
-													<st86:Width>498</st86:Width>
-													<st86:Unit>Pixel</st86:Unit>
-												</st86:ViewRepresentationSize>
-												<fr:ViewSequenceNumber>3</fr:ViewSequenceNumber>
+												<fr:ViewSequenceNumber>1</fr:ViewSequenceNumber>
 											</st86:View>
 										</st86:ViewDetails>
 									</st86:DesignRepresentationSheet>
@@ -251,9 +279,7 @@
 							<fr:extension>Polynésie Française</fr:extension>
 						</fr:ApplicationAreaExtension>
 						<fr:ApplicationTimeExtension>
-							<fr:extension periodCode="InYear">
-								10
-							</fr:extension>
+							<fr:extension periodCode="InYear">10</fr:extension>
 						</fr:ApplicationTimeExtension>
 					</st86:DesignApplication>
 				</st86:DesignApplicationDetails>

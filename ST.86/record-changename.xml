@@ -47,6 +47,7 @@
 								</st86:NewHolder>
 							</st86:HolderDetails>
 						</st86:RecordChangeNameAddress>
+						<fr:RecordKind>CA</fr:RecordKind>
 					</st86:DesignRecord>
 				</st86:DesignRecordDetails>
 			</st86:TransactionData>
