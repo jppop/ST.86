@@ -2935,9 +2935,11 @@
 	<!-- Version     : 1.0                                                      -->
 	<!-- Last Update : 2007-10-31                                               -->
 	<!-- ====================================================================== -->
+	<!-- fr-modified/2015-04-03: restrict to Design E-Filing and Divisional Application -->
 	<xs:simpleType name="TransactionCodeType">
 		<xs:restriction base="xs:token">
 			<xs:enumeration value="Design E-Filing"/>
+			<xs:enumeration value="Divisional Application"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<!-- ====================================================================== -->

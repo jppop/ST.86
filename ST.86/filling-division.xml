@@ -9,41 +9,38 @@
 	</st86:TransactionHeader>
 	<st86:DesignTransactionBody>
 		<st86:TransactionContentDetails>
-			<st86:TransactionIdentifier>uri:ets:tx:201504-00001</st86:TransactionIdentifier>
-			<st86:TransactionCode>Design E-Filing</st86:TransactionCode>
+			<st86:TransactionIdentifier>uri:ets:tx:201504-00002</st86:TransactionIdentifier>
+			<st86:TransactionCode>Divisional Application</st86:TransactionCode>
 			<st86:TransactionData>
 				<st86:DesignApplicationDetails>
 					<st86:DesignApplication operationCode="Insert">
-						<st86:DesignApplicationFormName>application-20152801.pdf</st86:DesignApplicationFormName>
+						<st86:DesignApplicationFormName>application-20152802.pdf</st86:DesignApplicationFormName>
 						<st86:RegistrationOfficeCode>FR</st86:RegistrationOfficeCode>
 						<st86:ReceiptNumber>urn:inpi:ack:2015-017-0912</st86:ReceiptNumber>
-						<st86:DesignApplicationNumber>urn:inpi:app:20152801</st86:DesignApplicationNumber>
+						<st86:DesignApplicationNumber>urn:inpi:app:20152802</st86:DesignApplicationNumber>
 						<st86:DesignApplicationDate>2015-04-01</st86:DesignApplicationDate>
 						<st86:FilingPlace>INPI/ETS</st86:FilingPlace>
 						<st86:DesignApplicationReference>JOLIDESSIN</st86:DesignApplicationReference>
 						<st86:DesignApplicationLanguageCode>fr</st86:DesignApplicationLanguageCode>
-						<st86:TotalDesign>2</st86:TotalDesign>
+						<st86:TotalDesign>1</st86:TotalDesign>
 						<st86:CorrespondenceLanguageCode>fr</st86:CorrespondenceLanguageCode>
 						<st86:DesignDetails>
 							<st86:Design>
-								<st86:DesignIdentifier>urn:inpi:design:20152801-001</st86:DesignIdentifier>
+								<st86:DesignIdentifier>urn:inpi:design:20152802-001</st86:DesignIdentifier>
 								<st86:DesignTitle>??? st86:DesignTitle ???</st86:DesignTitle>
 								<st86:DesignDescription>Luminaire "dents de loup" réalisé avec des crochets de boucher et une dalle LED lumineuse</st86:DesignDescription>
-								<st86:PublicationDefermentIndicator>true</st86:PublicationDefermentIndicator>
-								<st86:DefermentPeriod periodCode="InYear">3</st86:DefermentPeriod>
-								<st86:ColourIndicator>false</st86:ColourIndicator>
-								<st86:PublicationInColourIndicator>false</st86:PublicationInColourIndicator>
-								<st86:ImmediatePublicationIndicator>true</st86:ImmediatePublicationIndicator>
-								<st86:TotalRepresentationSheet>1</st86:TotalRepresentationSheet>
-								<st86:TotalBWView>1</st86:TotalBWView>
+								<st86:ColourIndicator>true</st86:ColourIndicator>
+								<st86:PublicationInColourIndicator>true</st86:PublicationInColourIndicator>
+								<st86:TotalRepresentationSheet>2</st86:TotalRepresentationSheet>
+								<st86:TotalBWView>2</st86:TotalBWView>
 								<st86:DesignRepresentationSheetDetails>
 									<st86:DesignRepresentationSheet>
-										<st86:RepresentationSheetFilename>repsheet-20152801-001-01.pdf</st86:RepresentationSheetFilename>
+										<st86:RepresentationSheetFilename>repsheet-20152802-001-01.pdf</st86:RepresentationSheetFilename>
 										<st86:RepresentationSheetFileFormat>PDF</st86:RepresentationSheetFileFormat>
 										<st86:RepresentationSheetColourIndicator>false</st86:RepresentationSheetColourIndicator>
 										<st86:ViewDetails>
 											<st86:View>
-												<st86:ViewFilename>view-20152801-001-01.jpeg</st86:ViewFilename>
+												<st86:ViewFilename>view-20152802-001-01.jpeg</st86:ViewFilename>
 												<st86:ViewFileFormat>JPEG</st86:ViewFileFormat>
 												<st86:ViewTitle>Vue en perspective du luminaire</st86:ViewTitle>
 												<st86:ViewColourIndicator>false</st86:ViewColourIndicator>
@@ -57,72 +54,29 @@
 											</st86:View>
 										</st86:ViewDetails>
 									</st86:DesignRepresentationSheet>
+									<st86:DesignRepresentationSheet>
+										<st86:RepresentationSheetFilename>view-20152802-001-02.pdf</st86:RepresentationSheetFilename>
+										<st86:RepresentationSheetFileFormat>PDF</st86:RepresentationSheetFileFormat>
+										<st86:RepresentationSheetColourIndicator>false</st86:RepresentationSheetColourIndicator>
+										<st86:ViewDetails>
+											<st86:View>
+												<st86:ViewFilename>view-20152802-001-02.jpeg</st86:ViewFilename>
+												<st86:ViewFileFormat>JPEG</st86:ViewFileFormat>
+												<st86:ViewTitle>Vue de détail du luminaire</st86:ViewTitle>
+												<st86:ViewColourIndicator>false</st86:ViewColourIndicator>
+												<st86:ViewKind>Image</st86:ViewKind>
+												<st86:ViewRepresentationSize>
+													<st86:Height>275</st86:Height>
+													<st86:Width>498</st86:Width>
+													<st86:Unit>Pixel</st86:Unit>
+												</st86:ViewRepresentationSize>
+												<fr:ViewSequenceNumber>2</fr:ViewSequenceNumber>
+											</st86:View>
+										</st86:ViewDetails>
+									</st86:DesignRepresentationSheet>
 								</st86:DesignRepresentationSheetDetails>
-								<st86:IndicationProductDetails>
-									<st86:IndicationProduct>
-										<st86:ClassDescriptionDetails>
-											<st86:ClassDescription>
-												<st86:ClassNumber>9999</st86:ClassNumber><!--non attribué au 
-													dépôt -->
-											</st86:ClassDescription>
-										</st86:ClassDescriptionDetails>
-									</st86:IndicationProduct>
-								</st86:IndicationProductDetails>
-								<st86:ApplicantDetails>
-									<st86:ApplicantKey>
-										<st86:Identifier>urn:siren:person:532 748 050</st86:Identifier>
-										<!--Le déposant est désigné globalement pour le dépôt. Non nécessaire ici -->
-									</st86:ApplicantKey>
-								</st86:ApplicantDetails>
-								<st86:RepresentativeDetails>
-									<st86:RepresentativeKey>
-										<st86:Identifier>Cabinet Orion</st86:Identifier>
-									</st86:RepresentativeKey>
-									<!--Le mandataire est désigné globalement pour le dépôt. Non nécessaire 
-										ici -->
-								</st86:RepresentativeDetails>
-								<st86:DesignerDetails>
-									<st86:Designer>
-										<fr:DesignerName>Philippe Le Stagiaire</fr:DesignerName>
-									</st86:Designer>
 
-								</st86:DesignerDetails>
-							</st86:Design>
-							<st86:Design>
-								<st86:DesignIdentifier>urn:inpi:design:20152801-002</st86:DesignIdentifier>
-								<st86:DesignTitle>??? st86:DesignTitle ???</st86:DesignTitle>
-								<st86:DesignDescription>Luminaire "dents de loup" réalisé avec des crochets de boucher et une dalle LED lumineuse</st86:DesignDescription>
-								<st86:PublicationDefermentIndicator>true</st86:PublicationDefermentIndicator>
-								<st86:DefermentPeriod periodCode="InYear">3</st86:DefermentPeriod>
-								<st86:ColourIndicator>false</st86:ColourIndicator>
-								<st86:PublicationInColourIndicator>false</st86:PublicationInColourIndicator>
-								<st86:ImmediatePublicationIndicator>true</st86:ImmediatePublicationIndicator>
-								<st86:TotalRepresentationSheet>1</st86:TotalRepresentationSheet>
-								<st86:TotalBWView>1</st86:TotalBWView>
-								<st86:DesignRepresentationSheetDetails>
-									<st86:DesignRepresentationSheet>
-										<st86:RepresentationSheetFilename>repsheet-20152801-001-01.pdf</st86:RepresentationSheetFilename>
-										<st86:RepresentationSheetFileFormat>PDF</st86:RepresentationSheetFileFormat>
-										<st86:RepresentationSheetColourIndicator>false</st86:RepresentationSheetColourIndicator>
-										<st86:ViewDetails>
-											<st86:View>
-												<st86:ViewFilename>view-20152801-001-01.jpeg</st86:ViewFilename>
-												<st86:ViewFileFormat>JPEG</st86:ViewFileFormat>
-												<st86:ViewTitle>Vue en perspective du luminaire</st86:ViewTitle>
-												<st86:ViewColourIndicator>false</st86:ViewColourIndicator>
-												<st86:ViewKind>Image</st86:ViewKind>
-												<st86:ViewRepresentationSize>
-													<st86:Height>351</st86:Height>
-													<st86:Width>498</st86:Width>
-													<st86:Unit>Pixel</st86:Unit>
-												</st86:ViewRepresentationSize>
-												<fr:ViewSequenceNumber>1</fr:ViewSequenceNumber>
-											</st86:View>
-										</st86:ViewDetails>
-									</st86:DesignRepresentationSheet>
-								</st86:DesignRepresentationSheetDetails>
-								
-								<!--non attribué au dépôt mais obligatoire -->
+								<!-- Ignoré. Non attribué au dépôt. -->
 								<st86:IndicationProductDetails>
 									<st86:IndicationProduct>
 										<st86:ClassDescriptionDetails>
@@ -133,20 +87,29 @@
 									</st86:IndicationProduct>
 								</st86:IndicationProductDetails>
 
-								<!--Le déposant est désigné globalement pour le dépôt. Non nécessaire ici -->
+								<st86:RelatedApplicationDetails>
+									<st86:RelatedApplication>
+										<st86:RelatedApplicationNumber>urn:inpi:app:20152801</st86:RelatedApplicationNumber>
+										<st86:RelatedApplicationKind>
+											Division
+										</st86:RelatedApplicationKind>
+									</st86:RelatedApplication>
+								</st86:RelatedApplicationDetails>
+
+								<!-- Ignoré. Le déposant est désigné globalement pour le dépôt. Non nécessaire ici -->
 								<st86:ApplicantDetails>
 									<st86:ApplicantKey>
 										<st86:Identifier>urn:siren:person:532 748 050</st86:Identifier>
 									</st86:ApplicantKey>
 								</st86:ApplicantDetails>
 
-								<!--Le mandataire est désigné globalement pour le dépôt. Non nécessaire ici -->
+								<!-- Ignoré. Le mandataire est désigné globalement pour le dépôt. Non nécessaire ici -->
 								<st86:RepresentativeDetails>
 									<st86:RepresentativeKey>
 										<st86:Identifier>Cabinet Orion</st86:Identifier>
 									</st86:RepresentativeKey>
 								</st86:RepresentativeDetails>
-								
+
 								<st86:DesignerDetails>
 									<st86:Designer>
 										<fr:DesignerName>Philippe Le Stagiaire</fr:DesignerName>
@@ -193,24 +156,27 @@
 								<fr:LegalEntityKind>Illimunés de l'Espace</fr:LegalEntityKind>
 							</st86:Applicant>
 						</st86:ApplicantDetails>
-
+						
 						<st86:RepresentativeDetails>
 							<st86:Representative>
-								<st86:RepresentativeIdentifier></st86:RepresentativeIdentifier>
-								<st86:RepresentativeKindCode>Employee</st86:RepresentativeKindCode>
+								<st86:RepresentativeIdentifier>urn:inpi:cpi:127667868</st86:RepresentativeIdentifier>
+								<st86:RepresentativeKindCode>
+									Professional Representative
+								</st86:RepresentativeKindCode>
 								<st86:RepresentativeAddressBook>
+									<!-- Une personne physique au sein d'une organisation -->
 									<st86:FormattedNameAddress>
 										<st86:Name>
 											<st86:FormattedName>
-												<st86:FirstName>Luke</st86:FirstName>
-												<st86:LastName>Skywalker</st86:LastName>
-												<st86:OrganizationName>Le Coté Obscur</st86:OrganizationName>
+												<st86:FirstName>Pierre</st86:FirstName>
+												<st86:LastName>LECLERC</st86:LastName>
+												<st86:OrganizationName>Cabinet Orion</st86:OrganizationName>
 											</st86:FormattedName>
 										</st86:Name>
 										<st86:Address>
 											<st86:FormattedAddress>
-												<st86:AddressBuilding>1</st86:AddressBuilding>
-												<st86:AddressStreet>rue de la grande Ourse</st86:AddressStreet>
+												<st86:AddressBuilding>36</st86:AddressBuilding>
+												<st86:AddressStreet>rue de Saint Petersbourg</st86:AddressStreet>
 												<st86:AddressCity>PARIS</st86:AddressCity>
 												<st86:AddressPostcode>75008</st86:AddressPostcode>
 												<st86:FormattedAddressCountryCode>FR</st86:FormattedAddressCountryCode>
@@ -220,49 +186,40 @@
 								</st86:RepresentativeAddressBook>
 							</st86:Representative>
 						</st86:RepresentativeDetails>
-						
-						<!-- Un pouvoir spécifique inclus dans le dépôt -->
-						<st86:Authorization>
-							<st86:AuthorizationDate>2001-01-01</st86:AuthorizationDate>
-							<st86:AuthorizationKind>Specific Authorization</st86:AuthorizationKind>
-							<st86:AuthorizationDocumentSupply>Attached</st86:AuthorizationDocumentSupply>
-							<st86:AuthorizationDocument>
-								<st86:DocumentFilename>pouvoir.pdf</st86:DocumentFilename>
-								<st86:DocumentFileFormat>PDF</st86:DocumentFileFormat>
-								<st86:DocumentDate>2001-01-01</st86:DocumentDate>
-								<st86:DocumentLanguageCode>fr</st86:DocumentLanguageCode>
-								<st86:DocumentMedia>File</st86:DocumentMedia>
-							</st86:AuthorizationDocument>
-						</st86:Authorization>
 
+						<!-- Un pouvoir permanent déjà fourni -->
+						<st86:Authorization>
+							<st86:AuthorizationIdentifier>urn:inpi:auth:81723-09</st86:AuthorizationIdentifier>
+							<st86:AuthorizationDate>2001-01-01</st86:AuthorizationDate>
+							<st86:AuthorizationKind>General Authorization</st86:AuthorizationKind>
+							<st86:AuthorizationDocumentSupply>Already on file</st86:AuthorizationDocumentSupply>
+						</st86:Authorization>
+						
 						<st86:CorrespondenceAddress>
-							<st86:CorrespondenceAddressIdentifier>urn:ets:person:fr-172687</st86:CorrespondenceAddressIdentifier>
 							<st86:CorrespondenceAddressParty>Representative</st86:CorrespondenceAddressParty>
 							<st86:CorrespondenceAddressBook>
-								<st86:FormattedNameAddress>
-									<st86:Name>
-										<st86:FormattedName>
-											<st86:FirstName>Luke</st86:FirstName>
-											<st86:LastName>Skywalker</st86:LastName>
-											<st86:OrganizationName>Le Coté Obscur</st86:OrganizationName>
-										</st86:FormattedName>
-									</st86:Name>
-									<st86:Address>
-										<st86:FormattedAddress>
-											<st86:AddressBuilding>1</st86:AddressBuilding>
-											<st86:AddressStreet>rue de la Grande Ourse</st86:AddressStreet>
-											<st86:AddressCity>PARIS</st86:AddressCity>
-											<st86:AddressPostcode>75008</st86:AddressPostcode>
-											<st86:FormattedAddressCountryCode>FR</st86:FormattedAddressCountryCode>
-										</st86:FormattedAddress>
-									</st86:Address>
-								</st86:FormattedNameAddress>
-								<st86:ContactInformationDetails>
-									<st86:Email>luke@darkside</st86:Email>
-								</st86:ContactInformationDetails>
+								<st86:FreeFormatAddressDetails>
+									<st86:FreeFormatNameAddressLine sequenceNumber="1">Cabinet Orion</st86:FreeFormatNameAddressLine>
+									<st86:FreeFormatNameAddressLine sequenceNumber="2">Pierre LECLERC</st86:FreeFormatNameAddressLine>
+									<st86:FreeFormatNameAddressLine sequenceNumber="3">36, rue de Saint Petersbourg</st86:FreeFormatNameAddressLine>
+									<st86:FreeFormatNameAddressLine sequenceNumber="4">75008 PARIS</st86:FreeFormatNameAddressLine>
+								</st86:FreeFormatAddressDetails>
 							</st86:CorrespondenceAddressBook>
 						</st86:CorrespondenceAddress>
 
+						<!-- Uniquement pour le suivi d'une procédure. Ignoré pour un enregistrement. -->
+						<st86:DesignApplicationEventDetails>
+							<st86:DesignApplicationEvent>
+								<st86:DesignApplicationEventDate>2005-04-15</st86:DesignApplicationEventDate>
+								<st86:DesignApplicationEventCode>Filed</st86:DesignApplicationEventCode>
+							</st86:DesignApplicationEvent>
+							<st86:DesignApplicationEvent>
+								<st86:DesignApplicationEventDate>2005-04-16</st86:DesignApplicationEventDate>
+								<st86:DesignApplicationEventCode>Rejected</st86:DesignApplicationEventCode>
+								<st86:Comment languageCode="fr">Irrecevable en l'état. Redevance de dépôt absente</st86:Comment>
+							</st86:DesignApplicationEvent>
+						</st86:DesignApplicationEventDetails>
+						
 						<st86:SignatoryDetails>
 							<st86:Signatory>
 								<st86:SignatoryName>
@@ -273,12 +230,26 @@
 										</st86:FreeFormatNameDetails>
 									</st86:FreeFormatName>
 								</st86:SignatoryName>
-								<st86:SignatoryCapacityCode>Other</st86:SignatoryCapacityCode>
+								<st86:SignatoryCapacityCode>Representative</st86:SignatoryCapacityCode>
 								<fr:SignatoryCapacityDetails>
-									<fr:RepresentativeDetail>Gérant</fr:RepresentativeDetail>
+									<fr:RepresentativeDetail>
+										CPI
+									</fr:RepresentativeDetail>
+									<fr:RepresentativeIdentifier>
+										urn:inpi:cpi:127667868
+									</fr:RepresentativeIdentifier>
 								</fr:SignatoryCapacityDetails>
 							</st86:Signatory>
 						</st86:SignatoryDetails>
+						
+						<fr:ApplicationAreaExtension>
+							<fr:extension>Polynésie Française</fr:extension>
+						</fr:ApplicationAreaExtension>
+						
+						<fr:ApplicationTimeExtension>
+							<fr:extension periodCode="InYear">5</fr:extension>
+						</fr:ApplicationTimeExtension>
+						
 					</st86:DesignApplication>
 				</st86:DesignApplicationDetails>
 			</st86:TransactionData>
