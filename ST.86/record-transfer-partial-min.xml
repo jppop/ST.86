@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<st86:Transaction xmlns:st86="http://www.wipo.int/standards/XMLSchema/designs"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fr="http://www.inpi.fr/standards/XMLSchema/designs"
+	xsi:schemaLocation="http://www.wipo.int/standards/XMLSchema/designs schemas/st86model-V1-0.xsd http://www.inpi.fr/standards/XMLSchema/designs schemas/st86model-V1.0-fr.xsd ">
+	<st86:DesignTransactionBody>
+		<st86:TransactionContentDetails>
+			<st86:TransactionCode>Transfer</st86:TransactionCode>
+			<st86:TransactionData>
+				<st86:DesignRecordDetails>
+					<st86:DesignRecord>
+						<st86:RecordTransfer>
+							<st86:RecordIdentifier>urn:inpi:record:FR201501-02930</st86:RecordIdentifier>
+							<st86:RecordTransferKind>Partial Transfer</st86:RecordTransferKind>
+							<st86:DesignKeyDetails>
+								<st86:DesignKey>
+									<st86:Identifier>urn:inpi:design:20150675-0001</st86:Identifier>
+								</st86:DesignKey>
+								<st86:DesignKey>
+									<st86:Identifier>urn:inpi:design:20150675-0002</st86:Identifier>
+								</st86:DesignKey>
+							</st86:DesignKeyDetails>
+						</st86:RecordTransfer>
+						<fr:RecordKind>PP</fr:RecordKind>
+					</st86:DesignRecord>
+				</st86:DesignRecordDetails>
+			</st86:TransactionData>
+		</st86:TransactionContentDetails>
+	</st86:DesignTransactionBody>
+</st86:Transaction>
