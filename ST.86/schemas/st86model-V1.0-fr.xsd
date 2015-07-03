@@ -12,6 +12,10 @@
 
     <xs:element name="ViewSequenceNumber" type="xs:string"></xs:element>
     <xs:element name="LegalEntityKind" type="tns:LegalEntityKindType" />
+    
+    <!-- Identifiant (SIREN) de l'organisation -->
+    <xs:element name="EntityId" type="xs:string" />
+    
     <xs:element name="SignatoryCapacityDetails" type="tns:SignatoryCapacityDetailsType"></xs:element>
 
     <xs:element name="ApplicationAreaExtension">
@@ -56,6 +60,7 @@
 				<xs:restriction base="xs:token">
 		    		<xs:enumeration value="CPI" />
 		    		<xs:enumeration value="L422-5" />
+		    		<xs:enumeration value="Lawyer" />
 				</xs:restriction>
 			</xs:simpleType>
 		</xs:union>
@@ -75,4 +80,41 @@
 		</xs:union>
     </xs:simpleType>
 
+	<xs:element name="DesignEventCodeEx" type="tns:DesignEventCodeExType" />
+	
+    <xs:simpleType name="DesignEventCodeExType">
+ 		<xs:union memberTypes="xs:token">
+			<xs:simpleType>
+				<xs:restriction base="xs:token">
+		    		<xs:enumeration value="Filed" />
+					<xs:enumeration value="Withdrawn"/>
+					<xs:enumeration value="Rejected"/>
+					<xs:enumeration value="Expired"/>
+		    		<xs:enumeration value="Registered and fully published" />
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+    </xs:simpleType>
+
+    <xs:element name="ViewLimitation" type="tns:ViewLimitationType" />
+    
+    <xs:complexType name="ViewLimitationType">
+    	<xs:annotation>
+    		<xs:documentation>
+    			Scope of the modification (partial modification)
+    		</xs:documentation>
+    	</xs:annotation>
+    	<xs:sequence>
+    		<xs:element name="ViewNumber" type="xs:string" maxOccurs="unbounded" />
+    	</xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="ViewDetails" type="tns:ViewDetailsType"></xs:element>
+
+    <xs:complexType name="ViewDetailsType">
+		<xs:sequence>
+			<xs:element name="Status" type="xs:string" />
+			<xs:element name="ExpiryDate" type="xs:date" />
+		</xs:sequence>
+    </xs:complexType>
 </xs:schema>
