@@ -180,8 +180,8 @@
 							<st86:CorrespondenceAddressParty>Applicant</st86:CorrespondenceAddressParty>
 							<st86:CorrespondenceAddressBook>
 								<st86:FreeFormatAddressDetails>
-									<st86:FreeFormatNameAddressLine>Réseidence La Mer Bleue</st86:FreeFormatNameAddressLine>
-									<st86:FreeFormatNameAddressLine>1, avenue du bord de mer</st86:FreeFormatNameAddressLine>
+									<st86:FreeFormatNameAddressLine>Résidence La Mer Bleue</st86:FreeFormatNameAddressLine>
+									<st86:FreeFormatNameAddressLine>1 avenue du bord de mer</st86:FreeFormatNameAddressLine>
 									<st86:FreeFormatNameAddressLine>34250 PALAVAS-LES-FLOTS</st86:FreeFormatNameAddressLine>
 								</st86:FreeFormatAddressDetails>
 								<st86:ContactInformationDetails>

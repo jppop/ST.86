@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<st86:Transaction xmlns:st86="http://www.wipo.int/standards/XMLSchema/designs"
+	xmlns:fr="http://www.inpi.fr/standards/XMLSchema/designs" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.wipo.int/standards/XMLSchema/designs schemas/st86model-V1-0.xsd http://www.inpi.fr/standards/XMLSchema/designs schemas/st86model-V1.0-fr.xsd ">
+
+	<st86:TransactionHeader>
+		<st86:SenderDetails>
+			<st86:RequestProducerDateTime>2015-06-23T09:30:10Z</st86:RequestProducerDateTime>
+		</st86:SenderDetails>
+	</st86:TransactionHeader>
+	
+	<fr:Response>
+		<fr:ResponseBody>
+
+			<fr:TransactionIdentifier>uri:ets:tx:20150703-00001</fr:TransactionIdentifier>
+			<fr:TransactionCode>Response</fr:TransactionCode>
+
+			<fr:DesignKey>
+				<st86:Identifier>urn:bpi:design:20151799-0001</st86:Identifier>
+			</fr:DesignKey>
+
+			<fr:CorrespondenceAddress>
+				<st86:CorrespondenceAddressIdentifier>urn:ets:pax:217878A9</st86:CorrespondenceAddressIdentifier>
+				<st86:CorrespondenceAddressParty>Applicant</st86:CorrespondenceAddressParty>
+				<st86:CorrespondenceAddressBook>
+					<st86:FormattedNameAddress>
+						<st86:Name>
+							<st86:FormattedName>
+								<st86:NamePrefix>M.</st86:NamePrefix>
+								<st86:FirstName>Jean</st86:FirstName>
+								<st86:LastName>MARTIN</st86:LastName>
+							</st86:FormattedName>
+
+						</st86:Name>
+						<st86:Address>
+							<st86:AddressCountryCode>FR</st86:AddressCountryCode>
+							<st86:FormattedAddress>
+								<st86:AddressLine>Résidence Les Flots Bleus - B1</st86:AddressLine>
+								<st86:AddressBuilding>367</st86:AddressBuilding>
+								<st86:AddressStreet>rue du bord de mer</st86:AddressStreet>
+								<st86:AddressCity>CANNES</st86:AddressCity>
+								<st86:AddressPostcode>06400</st86:AddressPostcode>
+								<st86:FormattedAddressCountryCode>FR</st86:FormattedAddressCountryCode>
+							</st86:FormattedAddress>
+						</st86:Address>
+					</st86:FormattedNameAddress>
+
+					<st86:ContactInformationDetails>
+						<st86:Email>jean.martin@gmail.com</st86:Email>
+					</st86:ContactInformationDetails>
+				</st86:CorrespondenceAddressBook>
+			</fr:CorrespondenceAddress>
+
+			<fr:DocumentIncludedDetails>
+				<fr:DocumentIncluded>
+					<st86:DocumentFilename>response.pdf</st86:DocumentFilename>
+					<st86:DocumentFileFormat>pdf</st86:DocumentFileFormat>
+					<st86:DocumentDate>2015-07-03</st86:DocumentDate>
+					<fr:DocumentCategory>undefined</fr:DocumentCategory>
+				</fr:DocumentIncluded>
+			</fr:DocumentIncludedDetails>
+			
+		</fr:ApplicantResponseBody>
+	</fr:ApplicantResponse>
+</st86:Transaction>

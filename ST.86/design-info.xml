@@ -28,7 +28,7 @@
 						<st86:ExpiryDate>2020-04-08</st86:ExpiryDate>
 						<st86:DesignCurrentStatusCode>Registered</st86:DesignCurrentStatusCode>
 						<st86:DesignCurrentStatusDate>2015-06-19</st86:DesignCurrentStatusDate>
-						
+
 						<st86:DesignRepresentationSheetDetails>
 							<st86:DesignRepresentationSheet>
 								<st86:RepresentationSheetFilename>viewform-20151799-0001.001.pdf</st86:RepresentationSheetFilename>
@@ -39,7 +39,11 @@
 										<st86:ViewFilename>view-20151799-0001.001.jpeg</st86:ViewFilename>
 										<st86:ViewFileFormat>JPEG</st86:ViewFileFormat>
 										<st86:ViewTitle>Robe pour femme avec motif géométrique représentant une tête d'éléphant.. Robe - vue de face</st86:ViewTitle>
-										<fr:ViewSequenceNumber>1.1</fr:ViewSequenceNumber>
+										<fr:ViewExDetails>
+											<fr:ViewSequenceNumber>1.1</fr:ViewSequenceNumber>
+											<fr:Status>Published</fr:Status>
+											<fr:ExpiryDate>2020-04-08</fr:ExpiryDate>
+										</fr:ViewExDetails>
 									</st86:View>
 								</st86:ViewDetails>
 							</st86:DesignRepresentationSheet>
@@ -52,12 +56,20 @@
 										<st86:ViewFilename>view-20151799-0001.002.jpeg</st86:ViewFilename>
 										<st86:ViewFileFormat>JPEG</st86:ViewFileFormat>
 										<st86:ViewTitle>Robe - vue de dos</st86:ViewTitle>
-										<fr:ViewSequenceNumber>1.2</fr:ViewSequenceNumber>
+										<st86:ViewColourIndicator>false</st86:ViewColourIndicator>
+										<st86:ViewKind>
+											Image
+										</st86:ViewKind>
+										<fr:ViewExDetails>
+											<fr:ViewSequenceNumber>1.2</fr:ViewSequenceNumber>
+											<fr:Status>Published</fr:Status>
+											<fr:ExpiryDate>2020-04-08</fr:ExpiryDate>
+										</fr:ViewExDetails>
 									</st86:View>
 								</st86:ViewDetails>
 							</st86:DesignRepresentationSheet>
 						</st86:DesignRepresentationSheetDetails>
-						
+
 						<st86:IndicationProductDetails>
 							<st86:IndicationProduct>
 								<st86:ClassificationKindCode>Locarno</st86:ClassificationKindCode>
@@ -74,7 +86,8 @@
 						<st86:StaffDetails>
 							<st86:Staff>
 								<st86:StaffName>VERCHAMP Paul</st86:StaffName>
-								<st86:OfficialTitle>Examinateur en Chef</st86:OfficialTitle></st86:Staff>
+								<st86:OfficialTitle>Examinateur en Chef</st86:OfficialTitle>
+							</st86:Staff>
 						</st86:StaffDetails>
 
 						<st86:PublicationDetails>
@@ -115,6 +128,20 @@
 
 						<st86:DesignEventDetails>
 							<st86:DesignEvent>
+								<st86:DesignEventDate>2020-06-19</st86:DesignEventDate>
+								<st86:DesignEventCode>Registered</st86:DesignEventCode>
+								<st86:Comment languageCode="FR">Réquisition de publicité 5 ans et prorogation à 10 ans</st86:Comment>
+								<fr:DesignEventCodeEx>Partial Renewal</fr:DesignEventCodeEx>
+								<fr:ViewLimitation>
+									<fr:ViewNumber>864621</fr:ViewNumber>
+								</fr:ViewLimitation>
+							</st86:DesignEvent>
+							<st86:DesignEvent>
+								<st86:DesignEventDate>2018-06-19</st86:DesignEventDate>
+								<st86:DesignEventCode>Registered</st86:DesignEventCode>
+								<fr:DesignEventCodeEx>Change of Name</fr:DesignEventCodeEx>
+							</st86:DesignEvent>
+							<st86:DesignEvent>
 								<st86:DesignEventDate>2015-06-19</st86:DesignEventDate>
 								<st86:DesignEventCode>Registered</st86:DesignEventCode>
 								<fr:DesignEventCodeEx>Registered and fully published</fr:DesignEventCodeEx>
@@ -124,6 +151,7 @@
 								<st86:DesignEventCode>Registered</st86:DesignEventCode>
 							</st86:DesignEvent>
 						</st86:DesignEventDetails>
+
 					</st86:Design>
 
 				</st86:DesignDetails>
