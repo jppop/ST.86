@@ -55,8 +55,12 @@
 								</st86:Claimant>
 
 							</st86:ClaimantDetails>
+							
 							<st86:RepresentativeDetails>
 								<st86:Representative>
+									<st86:RepresentativeKindCode>
+										Professional Representative
+									</st86:RepresentativeKindCode>
 									<st86:RepresentativeLegalEntity>SCHMIT-CHRETIEN</st86:RepresentativeLegalEntity>
 									<st86:RepresentativeAddressBook>
 										<st86:FormattedNameAddress>
@@ -87,6 +91,41 @@
 								</st86:Representative>
 
 							</st86:RepresentativeDetails>
+							
+							<fr:SignatoryDetails>
+								<fr:Signatory>
+									<st86:SignatoryName>
+										<st86:FreeFormatName>
+											<st86:NameKind>Natural Person</st86:NameKind>
+											<st86:FreeFormatNameDetails>
+												<st86:FreeFormatNameLine>SylVette BLENQUET</st86:FreeFormatNameLine>
+											</st86:FreeFormatNameDetails>
+										</st86:FreeFormatName>
+									</st86:SignatoryName>
+									<st86:SignatureAssociatedText>Mandataire</st86:SignatureAssociatedText>
+									<st86:SignatoryCapacityCode>Representative</st86:SignatoryCapacityCode>
+									<fr:SignatoryCapacityDetails>
+										<fr:RepresentativeDetail>
+											CPI
+										</fr:RepresentativeDetail>
+										<fr:RepresentativeIdentifier>
+											urn:inpi:cpi:127667868
+										</fr:RepresentativeIdentifier>
+									</fr:SignatoryCapacityDetails>
+								</fr:Signatory>
+							</fr:SignatoryDetails>
+
+							<fr:CorrespondenceAddress>
+								<st86:CorrespondenceAddressParty>Representative</st86:CorrespondenceAddressParty>
+								<st86:CorrespondenceAddressBook>
+									<st86:FreeFormatAddressDetails>
+										<st86:FreeFormatNameAddressLine sequenceNumber="1">SCHMIT-CHRETIEN</st86:FreeFormatNameAddressLine>
+										<st86:FreeFormatNameAddressLine sequenceNumber="2">SylVette BLENQUET</st86:FreeFormatNameAddressLine>
+										<st86:FreeFormatNameAddressLine sequenceNumber="3">326 rue du Mas de Verchant</st86:FreeFormatNameAddressLine>
+										<st86:FreeFormatNameAddressLine sequenceNumber="4">34000 MONTPELLIER</st86:FreeFormatNameAddressLine>
+									</st86:FreeFormatAddressDetails>
+								</st86:CorrespondenceAddressBook>
+							</fr:CorrespondenceAddress>
 
 							<fr:ApplicationAreaExtension>
 								<fr:extension>Polynésie Française</fr:extension>

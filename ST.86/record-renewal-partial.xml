@@ -80,6 +80,7 @@
 											<st86:Email>montpellier@schmit-chretien.com</st86:Email></st86:ContactInformationDetails></st86:RepresentativeAddressBook></st86:Representative>
 								
 							</st86:RepresentativeDetails>
+							
 							<st86:LimitationDetails>
 								<st86:Limitation>
 									<fr:ViewLimitation>

@@ -202,6 +202,15 @@
 		</xs:union>
     </xs:simpleType>
 
-
     <xs:element name="DocumentCategory" type="tns:DocumentCategoryType"></xs:element>
+    
+	<xs:element name="SignatoryDetails">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Signatory" type="st86:SignatoryType" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="CorrespondenceAddress" type="st86:CorrespondenceAddressType"/>
 </xs:schema>
