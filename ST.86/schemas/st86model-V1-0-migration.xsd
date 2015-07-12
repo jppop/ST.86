@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.wipo.int/standards/XMLSchema/designs"
+    xmlns:fr="http://www.inpi.fr/standards/XMLSchema/designs"
 	targetNamespace="http://www.wipo.int/standards/XMLSchema/designs"
 	elementFormDefault="qualified"
 	attributeFormDefault="unqualified" version="1.0">
@@ -15,7 +16,7 @@
 	<!-- *                                                                    * -->
 	<!-- ********************************************************************** -->
 	<xs:annotation>
-		<xs:documentation>INPI ST.86 scoped to Design e-Filling only (based on WIPO Standard ST.86 Model Schema Version 1.0, 17 December 2007)</xs:documentation>
+		<xs:documentation>WIPO Standard ST.86 Model Schema Version 1.0, 17 December 2007</xs:documentation>
 	</xs:annotation>
 	<!-- ====================================================================== -->
 	<!-- Include of external referenced standard types                          -->
@@ -69,19 +70,21 @@
 	<!-- Version     : 1.0                                                      -->
 	<!-- Last Update : 2007-10-31                                               -->
 	<!-- ====================================================================== -->
-	<!-- fr-modified/2015-04-03: restrict to DesignApplicationDetails -->
+	<!-- fr-modified/2015-07-13: restricted to DesignApplicationDetails -->
 	<xs:complexType name="TransactionDataType">
 		<xs:sequence>
-			<!-- ================================================================= -->
-			<!-- Design Application                                                -->
-			<!-- ================================================================= -->
-			<xs:element name="DesignApplicationDetails">
-				<xs:complexType>
-					<xs:sequence>
-						<xs:element name="DesignApplication" type="DesignApplicationType" maxOccurs="unbounded"/>
-					</xs:sequence>
-				</xs:complexType>
-			</xs:element>
+			<xs:choice minOccurs="0">
+				<!-- ================================================================= -->
+				<!-- Design Application                                                -->
+				<!-- ================================================================= -->
+				<xs:element name="DesignApplicationDetails">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="DesignApplication" type="DesignApplicationType" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
 			<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
@@ -387,6 +390,7 @@
 		</xs:sequence>
 	</xs:complexType>
 	<!-- ====================================================================== -->
+	<!-- Filename    : DesignApplicationType.xsd                                -->
 	<!-- Author      : SDWG ST.86 Task Force                                    -->
 	<!-- Version     : 1.0                                                      -->
 	<!-- Last Update : 2007-10-31                                               -->
@@ -818,8 +822,7 @@
 					</xs:sequence>
 				</xs:complexType>
 			</xs:element>
-	        <!-- fr-modified/2015-17-03: strict mode -->
-			<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
 	<!-- ====================================================================== -->
@@ -2031,10 +2034,8 @@
 	<!-- Version     : 1.0                                                      -->
 	<!-- Last Update : 2007-10-31                                               -->
 	<!-- ====================================================================== -->
-	
-	<!-- fr-modified/2015-04-03: restrict to Locarno -->
 	<xs:simpleType name="ClassNumberType">
-		<xs:union memberTypes="LocarnoClassNumberType"/>
+		<xs:union memberTypes="xs:token LocarnoClassNumberType"/>
 	</xs:simpleType>
 	<!-- ====================================================================== -->
 	<!-- Filename    : ClassificationKindCodeType.xsd                           -->
@@ -2042,19 +2043,14 @@
 	<!-- Version     : 1.0                                                      -->
 	<!-- Last Update : 2007-10-31                                               -->
 	<!-- ====================================================================== -->
-	<!-- fr-modified/2015-04-03: restrict to Locarno -->
 	<xs:simpleType name="ClassificationKindCodeType">
-	<!-- TODO: Should we keep the possiblity to use something other than Locarno ? -->
-<!-- 		<xs:union memberTypes="WIPOST3CodeType xs:token"> -->
-<!-- 			<xs:simpleType> -->
-<!-- 				<xs:restriction base="xs:token"> -->
-<!-- 					<xs:enumeration value="Locarno"/> -->
-<!-- 				</xs:restriction> -->
-<!-- 			</xs:simpleType> -->
-<!-- 		</xs:union> -->
-		<xs:restriction base="xs:token">
-			<xs:enumeration value="Locarno"/>
-		</xs:restriction>
+		<xs:union memberTypes="WIPOST3CodeType xs:token">
+			<xs:simpleType>
+				<xs:restriction base="xs:token">
+					<xs:enumeration value="Locarno"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
 	</xs:simpleType>
 	<!-- ====================================================================== -->
 	<!-- Filename    : CorrespondenceAddressPartyType.xsd                           -->
@@ -2936,12 +2932,15 @@
 	<!-- Version     : 1.0                                                      -->
 	<!-- Last Update : 2007-10-31                                               -->
 	<!-- ====================================================================== -->
-	<!-- fr-modified/2015-04-03: restrict to Design E-Filing and Divisional Application -->
+	<!-- fr-modified/2015-07-13: restrict to Data Migration -->
 	<xs:simpleType name="TransactionCodeType">
-		<xs:restriction base="xs:token">
-			<xs:enumeration value="Design E-Filing"/>
-			<xs:enumeration value="Divisional Application"/>
-		</xs:restriction>
+		<xs:union memberTypes="xs:token">
+			<xs:simpleType>
+				<xs:restriction base="xs:token">
+					<xs:enumeration value="Data Migration"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
 	</xs:simpleType>
 	<!-- ====================================================================== -->
 	<!-- Filename    : TransactionSubCodeType.xsd                               -->

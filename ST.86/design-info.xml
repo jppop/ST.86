@@ -41,6 +41,7 @@
 										<st86:ViewTitle>Robe pour femme avec motif géométrique représentant une tête d'éléphant.. Robe - vue de face</st86:ViewTitle>
 										<fr:ViewExDetails>
 											<fr:ViewSequenceNumber>1.1</fr:ViewSequenceNumber>
+											<fr:ViewNumber>963632</fr:ViewNumber>
 											<fr:Status>Published</fr:Status>
 											<fr:ExpiryDate>2020-04-08</fr:ExpiryDate>
 										</fr:ViewExDetails>
@@ -62,9 +63,9 @@
 										</st86:ViewKind>
 										<fr:ViewExDetails>
 											<fr:ViewSequenceNumber>1.2</fr:ViewSequenceNumber>
+											<fr:ViewNumber>963633</fr:ViewNumber></fr:ViewExDetails>
 											<fr:Status>Published</fr:Status>
 											<fr:ExpiryDate>2020-04-08</fr:ExpiryDate>
-										</fr:ViewExDetails>
 									</st86:View>
 								</st86:ViewDetails>
 							</st86:DesignRepresentationSheet>
@@ -133,7 +134,7 @@
 								<st86:Comment languageCode="FR">Réquisition de publicité 5 ans et prorogation à 10 ans</st86:Comment>
 								<fr:DesignEventCodeEx>Partial Renewal</fr:DesignEventCodeEx>
 								<fr:ViewLimitation>
-									<fr:ViewNumber>864621</fr:ViewNumber>
+									<fr:ViewNumber>963633</fr:ViewNumber>
 								</fr:ViewLimitation>
 							</st86:DesignEvent>
 							<st86:DesignEvent>
@@ -149,6 +150,9 @@
 							<st86:DesignEvent>
 								<st86:DesignEventDate>2015-04-08</st86:DesignEventDate>
 								<st86:DesignEventCode>Registered</st86:DesignEventCode>
+								<fr:DesignEventCodeEx>
+									Filed
+								</fr:DesignEventCodeEx>
 							</st86:DesignEvent>
 						</st86:DesignEventDetails>
 

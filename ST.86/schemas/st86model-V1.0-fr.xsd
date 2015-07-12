@@ -8,6 +8,7 @@
 	<xs:import namespace="http://www.wipo.int/standards/XMLSchema/designs"  schemaLocation="st86model-V1-0.xsd" />
 	<xs:include schemaLocation="RecordKind.xsd"/>
 	
+	<xs:element name="SystemIdentifier" type="xs:token" />
 	<xs:element name="DesignerName" type="xs:string" />
 
     <xs:element name="LegalEntityKind" type="tns:LegalEntityKindType" />
@@ -96,6 +97,29 @@
 		</xs:union>
     </xs:simpleType>
 
+    <xs:simpleType name="TransactionKindType">
+ 		<xs:union memberTypes="xs:token">
+			<xs:simpleType>
+				<xs:restriction base="xs:token">
+		    		<xs:enumeration value="Filing" />
+					<xs:enumeration value="Renewal"/>
+					<xs:enumeration value="Recording"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+    </xs:simpleType>
+
+    <xs:element name="DesignEventExDetails" type="tns:DesignEventExDetailsType" />
+
+    <xs:complexType name="DesignEventExDetailsType">
+    	<xs:sequence>
+			<xs:element name="DesignEventCodeEx" type="tns:DesignEventCodeExType" />
+			<xs:element name="ViewLimitation" type="tns:ViewLimitationType" minOccurs="0"/>
+			<xs:element name="TransactionKind" type="tns:TransactionKindType" minOccurs="0"/>
+			<xs:element name="DesignBasicRecord" type="st86:DesignBasicRecordType" minOccurs="0"/>
+    	</xs:sequence>
+    </xs:complexType>
+
     <xs:element name="ViewLimitation" type="tns:ViewLimitationType" />
     
     <xs:complexType name="ViewLimitationType">
@@ -114,8 +138,9 @@
     <xs:complexType name="ViewDetailsType">
 		<xs:sequence>
 			<xs:element name="ViewSequenceNumber" type="xs:string"></xs:element>
-			<xs:element name="Status" type="tns:ViewStatusType" />
-			<xs:element name="ExpiryDate" type="xs:date" />
+			<xs:element name="ViewNumber" type="xs:string" minOccurs="0"/>
+			<xs:element name="Status" type="tns:ViewStatusType" minOccurs="0" />
+			<xs:element name="ExpiryDate" type="xs:date" minOccurs="0" />
 		</xs:sequence>
     </xs:complexType>
 
@@ -213,4 +238,17 @@
 	</xs:element>
 
 	<xs:element name="CorrespondenceAddress" type="st86:CorrespondenceAddressType"/>
+
+	<xs:element name="DesignApplicationCurrentStatusCodeEx" type="tns:DesignApplicationCurrentStatusCodeExType"/>
+	
+	<xs:simpleType name="DesignApplicationCurrentStatusCodeExType">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="Reçu"/>
+			<xs:enumeration value="Irrecevable"/>
+			<xs:enumeration value="Recevable"/>
+			<xs:enumeration value="Irrégulier fond"/>
+			<xs:enumeration value="Irrégulier forme"/>
+			<xs:enumeration value="Irrégulier fond et forme"/>
+		</xs:restriction>
+	</xs:simpleType>
 </xs:schema>
