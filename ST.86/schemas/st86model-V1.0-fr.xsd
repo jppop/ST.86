@@ -85,6 +85,7 @@
 	<xs:element name="DesignEventCodeEx" type="tns:DesignEventCodeExType" />
 	
     <xs:simpleType name="DesignEventCodeExType">
+    <!-- TODO: to be completed -->
  		<xs:union memberTypes="xs:token">
 			<xs:simpleType>
 				<xs:restriction base="xs:token">
@@ -105,6 +106,7 @@
 		    		<xs:enumeration value="Filing" />
 					<xs:enumeration value="Renewal"/>
 					<xs:enumeration value="Recording"/>
+					<xs:enumeration value="Withdrawal"/>
 				</xs:restriction>
 			</xs:simpleType>
 		</xs:union>
@@ -250,6 +252,8 @@
 			<xs:enumeration value="Irrégulier fond"/>
 			<xs:enumeration value="Irrégulier forme"/>
 			<xs:enumeration value="Irrégulier fond et forme"/>
+			<xs:enumeration value="Rejet Partiel"/>
+			<xs:enumeration value="Rejet Total"/>
 		</xs:restriction>
 	</xs:simpleType>
 
