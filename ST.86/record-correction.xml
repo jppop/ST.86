@@ -17,14 +17,120 @@
 				<st86:DesignRecordDetails>
 					<st86:DesignRecord>
 						<st86:DesignBasicRecord>
+							<st86:RecordFilingDate>2151-07-02</st86:RecordFilingDate>
 							<st86:BasicRecordKind>Correction</st86:BasicRecordKind>
-							<st86:RecordEventDetails>
-								<st86:RecordEvent>
-									<st86:RecordEventCode>
-										To Check
-									</st86:RecordEventCode>
-								</st86:RecordEvent>
-							</st86:RecordEventDetails>
+							<st86:DesignKeyDetails>
+								<st86:DesignKey>
+									<st86:Identifier>urn:bpi:design:20151799-0001</st86:Identifier>
+								</st86:DesignKey>
+							</st86:DesignKeyDetails>
+							<st86:ClaimantDetails>
+								<st86:Claimant>
+									<st86:ClaimantIdentifier>urn:ets:pax:217878A9</st86:ClaimantIdentifier>
+									<st86:ClaimantAddressBook>
+										<st86:FormattedNameAddress>
+											<st86:Name>
+												<st86:FormattedName>
+													<st86:NamePrefix>M.</st86:NamePrefix>
+													<st86:FirstName>Jean</st86:FirstName>
+													<st86:LastName>MARTIN</st86:LastName>
+												</st86:FormattedName>
+											</st86:Name>
+											<st86:Address>
+												<st86:AddressCountryCode>FR</st86:AddressCountryCode>
+												<st86:FormattedAddress>
+													<st86:AddressLine>Résidence Les Flots Bleus - B1</st86:AddressLine>
+													<st86:AddressBuilding>367</st86:AddressBuilding>
+													<st86:AddressStreet>rue du bord de mer</st86:AddressStreet>
+													<st86:AddressCity>CANNES</st86:AddressCity>
+													<st86:AddressPostcode>06400</st86:AddressPostcode>
+													<st86:FormattedAddressCountryCode>FR</st86:FormattedAddressCountryCode>
+												</st86:FormattedAddress>
+											</st86:Address>
+										</st86:FormattedNameAddress>
+
+										<st86:ContactInformationDetails>
+											<st86:Email>jean.martin@gmail.com</st86:Email>
+										</st86:ContactInformationDetails>
+									</st86:ClaimantAddressBook>
+								</st86:Claimant>
+
+							</st86:ClaimantDetails>
+							
+							<st86:RepresentativeDetails>
+								<st86:Representative>
+									<st86:RepresentativeKindCode>
+										Professional Representative
+									</st86:RepresentativeKindCode>
+									<st86:RepresentativeLegalEntity>SCHMIT-CHRETIEN</st86:RepresentativeLegalEntity>
+									<st86:RepresentativeAddressBook>
+										<st86:FormattedNameAddress>
+											<st86:Name>
+												<st86:FormattedName>
+													<st86:FirstName>SYLVETTE</st86:FirstName>
+													<st86:LastName>BENQUET</st86:LastName>
+													<st86:OrganizationName>SCHMIT-CHRETIEN</st86:OrganizationName>
+												</st86:FormattedName>
+												<fr:LegalEntityKind>SAS</fr:LegalEntityKind>
+											</st86:Name>
+											<st86:Address>
+												<st86:FormattedAddress>
+													<st86:AddressLine>Zone Le Millenaire</st86:AddressLine>
+													<st86:AddressBuilding>326</st86:AddressBuilding>
+													<st86:AddressStreet>rue du Mas de Verchant</st86:AddressStreet>
+													<st86:AddressCity>MONTPELLIER</st86:AddressCity>
+													<st86:AddressPostcode>34000</st86:AddressPostcode>
+												</st86:FormattedAddress>
+											</st86:Address>
+										</st86:FormattedNameAddress>
+										<st86:ContactInformationDetails>
+											<st86:Phone>04 67 15 80 49</st86:Phone>
+											<st86:Fax>04 67 15 24 16</st86:Fax>
+											<st86:Email>montpellier@schmit-chretien.com</st86:Email>
+										</st86:ContactInformationDetails>
+									</st86:RepresentativeAddressBook>
+								</st86:Representative>
+
+							</st86:RepresentativeDetails>
+							
+							<fr:SignatoryDetails>
+								<fr:Signatory>
+									<st86:SignatoryName>
+										<st86:FreeFormatName>
+											<st86:NameKind>Natural Person</st86:NameKind>
+											<st86:FreeFormatNameDetails>
+												<st86:FreeFormatNameLine>SylVette BLENQUET</st86:FreeFormatNameLine>
+											</st86:FreeFormatNameDetails>
+										</st86:FreeFormatName>
+									</st86:SignatoryName>
+									<st86:SignatureAssociatedText>Mandataire</st86:SignatureAssociatedText>
+									<st86:SignatoryCapacityCode>Representative</st86:SignatoryCapacityCode>
+									<fr:SignatoryCapacityDetails>
+										<fr:RepresentativeDetail>
+											CPI
+										</fr:RepresentativeDetail>
+										<fr:RepresentativeIdentifier>
+											urn:inpi:cpi:127667868
+										</fr:RepresentativeIdentifier>
+									</fr:SignatoryCapacityDetails>
+								</fr:Signatory>
+							</fr:SignatoryDetails>
+
+							<fr:CorrespondenceAddress>
+								<st86:CorrespondenceAddressParty>Representative</st86:CorrespondenceAddressParty>
+								<st86:CorrespondenceAddressBook>
+									<st86:FreeFormatAddressDetails>
+										<st86:FreeFormatNameAddressLine sequenceNumber="1">SCHMIT-CHRETIEN</st86:FreeFormatNameAddressLine>
+										<st86:FreeFormatNameAddressLine sequenceNumber="2">SylVette BLENQUET</st86:FreeFormatNameAddressLine>
+										<st86:FreeFormatNameAddressLine sequenceNumber="3">326 rue du Mas de Verchant</st86:FreeFormatNameAddressLine>
+										<st86:FreeFormatNameAddressLine sequenceNumber="4">34000 MONTPELLIER</st86:FreeFormatNameAddressLine>
+									</st86:FreeFormatAddressDetails>
+								</st86:CorrespondenceAddressBook>
+							</fr:CorrespondenceAddress>
+							<fr:CorrectionDetails>
+								<fr:CorrectionPart>70</fr:CorrectionPart>
+								<fr:CorrectionText>Il fallait lire FRANCONIERI au lieu de Franck O'Nieri</fr:CorrectionText>
+							</fr:CorrectionDetails>
 						</st86:DesignBasicRecord>
 					</st86:DesignRecord>
 				</st86:DesignRecordDetails>

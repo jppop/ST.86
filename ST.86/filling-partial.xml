@@ -179,9 +179,7 @@
 						<st86:RepresentativeDetails>
 							<st86:Representative>
 								<st86:RepresentativeIdentifier>urn:ets:pax:fr-128709</st86:RepresentativeIdentifier>
-								<st86:RepresentativeKindCode>
-									Professional Representative
-								</st86:RepresentativeKindCode>
+								<st86:RepresentativeKindCode>Other</st86:RepresentativeKindCode>
 								<st86:RepresentativeAddressBook>
 									<!-- En principe, un mandataire est obligatoire quand il y a plusieurs déposants -->
 									<st86:FormattedNameAddress>

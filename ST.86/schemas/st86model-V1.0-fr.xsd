@@ -252,4 +252,50 @@
 			<xs:enumeration value="Irrégulier fond et forme"/>
 		</xs:restriction>
 	</xs:simpleType>
+
+	<xs:element name="CorrectionDetails"
+		type="tns:CorrectionDetailsType">
+	</xs:element>
+
+	<xs:complexType name="CorrectionDetailsType">
+        <xs:sequence>
+        	<xs:element name="CorrectionPart" type="xs:token">
+        		<xs:annotation>
+        			<xs:documentation>
+        				INID Code of the modified data
+        			</xs:documentation>
+        		</xs:annotation>
+        	</xs:element>
+        	<xs:element name="CorrectionText" type="st86:TextType"
+        		minOccurs="0" maxOccurs="unbounded">
+        		<xs:annotation>
+        			<xs:documentation>Free text</xs:documentation>
+        		</xs:annotation>
+        	</xs:element>
+			<xs:element name="DesignDetails" minOccurs="0">
+                <xs:annotation>
+                	<xs:documentation>Modified designs details</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+					<xs:sequence>
+						<xs:element name="Design" type="st86:DesignType" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+       </xs:sequence>
+	</xs:complexType>
+
+	<xs:simpleType name="PreferredResponseMethodType">
+        <xs:annotation>
+        	<xs:documentation>preferred response method via e-mail or mail</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+			<xs:enumeration value="mail"></xs:enumeration>
+			<xs:enumeration value="email"></xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:element name="PreferredResponseMethod"
+		type="tns:PreferredResponseMethodType">
+	</xs:element>
 </xs:schema>
