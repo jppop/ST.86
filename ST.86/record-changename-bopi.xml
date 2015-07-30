@@ -57,11 +57,11 @@
 
 							</st86:ClaimantDetails>
 							<st86:CorrespondenceAddress>
-								<st86:CorrespondenceAddressIdentifier>urn:ets:person:FR2015-980980</st86:CorrespondenceAddressIdentifier>
+								<st86:CorrespondenceAddressIdentifier>urn:ets:pax:FR2015-980980</st86:CorrespondenceAddressIdentifier>
 							</st86:CorrespondenceAddress>
 							<st86:HolderDetails>
 								<st86:NewHolder>
-									<st86:ApplicantIdentifier>urn:siren:person:356000000</st86:ApplicantIdentifier>
+									<st86:ApplicantIdentifier>urn:siren:pax:356000000</st86:ApplicantIdentifier>
 									<st86:ApplicantNationalityCode>FR</st86:ApplicantNationalityCode>
 									<st86:ApplicantLegalEntity>Legal Entity</st86:ApplicantLegalEntity>
 									<st86:ApplicantAddressBook>

@@ -99,7 +99,7 @@
 								<!-- Ignoré. Le déposant est désigné globalement pour le dépôt. Non nécessaire ici -->
 								<st86:ApplicantDetails>
 									<st86:ApplicantKey>
-										<st86:Identifier>urn:siren:person:532 748 050</st86:Identifier>
+										<st86:Identifier>urn:siren:pax:532 748 050</st86:Identifier>
 									</st86:ApplicantKey>
 								</st86:ApplicantDetails>
 
@@ -121,7 +121,7 @@
 						
 						<st86:ApplicantDetails>
 							<st86:Applicant>
-								<st86:ApplicantIdentifier>urn:siren:person:532 748 050</st86:ApplicantIdentifier>
+								<st86:ApplicantIdentifier>urn:siren:pax:532 748 050</st86:ApplicantIdentifier>
 								<st86:ApplicantNationalityCode>FR</st86:ApplicantNationalityCode>
 								<st86:ApplicantLegalEntity>Legal Entity</st86:ApplicantLegalEntity>
 								<st86:ApplicantAddressBook>

@@ -117,7 +117,7 @@
 								<!-- Ignoré. Le déposant est désigné globalement pour le dépôt. Non nécessaire ici -->
 								<st86:ApplicantDetails>
 									<st86:ApplicantKey>
-										<st86:Identifier>urn:siren:person:532748050</st86:Identifier>
+										<st86:Identifier>urn:siren:pax:532748050</st86:Identifier>
 									</st86:ApplicantKey>
 								</st86:ApplicantDetails>
 
@@ -139,16 +139,21 @@
 						
 						<st86:ApplicantDetails>
 							<st86:Applicant>
-								<st86:ApplicantIdentifier>urn:siren:person:532 748 050</st86:ApplicantIdentifier>
+								<st86:ApplicantIdentifier>urn:ets:pax:FR3265122</st86:ApplicantIdentifier>
+								<st86:ApplicantIdentifier>urn:siren:pax:532 748 050</st86:ApplicantIdentifier>
+								<st86:ApplicantIdentifier>urn:bpi:pax:901823890131</st86:ApplicantIdentifier>
 								<st86:ApplicantNationalityCode>FR</st86:ApplicantNationalityCode>
-								<st86:ApplicantLegalEntity>Legal Entity</st86:ApplicantLegalEntity>
+								<st86:ApplicantLegalEntity>Association en cours d'inscription</st86:ApplicantLegalEntity>
 								<st86:ApplicantAddressBook>
 									<!-- Une personne morale -->
 									<st86:FormattedNameAddress>
 										<st86:Name>
 											<st86:FormattedName>
 												<st86:LastName>Le Coté Obscur</st86:LastName>
+												<st86:IndividualIdentifier>532748050</st86:IndividualIdentifier>
 											</st86:FormattedName>
+											<!--Forme juridique -->
+											<fr:LegalEntityKind>EURL</fr:LegalEntityKind>
 										</st86:Name>
 										<st86:Address>
 											<st86:FormattedAddress>
@@ -170,14 +175,13 @@
 										</st86:Address>
 									</st86:FormattedNameAddress>
 								</st86:ApplicantAddressBook>
-								<!--Forme juridique -->
-								<fr:LegalEntityKind>Illimunés de l'Espace</fr:LegalEntityKind>
 							</st86:Applicant>
 						</st86:ApplicantDetails>
 						
 						<st86:RepresentativeDetails>
 							<st86:Representative>
 								<st86:RepresentativeIdentifier>urn:inpi:cpi:127667868</st86:RepresentativeIdentifier>
+								<st86:RepresentativeIdentifier>urn:bpi:pax:192839013</st86:RepresentativeIdentifier>
 								<st86:RepresentativeKindCode>
 									Professional Representative
 								</st86:RepresentativeKindCode>
@@ -190,6 +194,7 @@
 												<st86:LastName>LECLERC</st86:LastName>
 												<st86:OrganizationName>Cabinet Orion</st86:OrganizationName>
 											</st86:FormattedName>
+											<fr:NameKindType>Natural Person</fr:NameKindType>
 										</st86:Name>
 										<st86:Address>
 											<st86:FormattedAddress>
@@ -216,12 +221,25 @@
 						<st86:CorrespondenceAddress>
 							<st86:CorrespondenceAddressParty>Representative</st86:CorrespondenceAddressParty>
 							<st86:CorrespondenceAddressBook>
-								<st86:FreeFormatAddressDetails>
-									<st86:FreeFormatNameAddressLine sequenceNumber="1">Cabinet Orion</st86:FreeFormatNameAddressLine>
-									<st86:FreeFormatNameAddressLine sequenceNumber="2">Pierre LECLERC</st86:FreeFormatNameAddressLine>
-									<st86:FreeFormatNameAddressLine sequenceNumber="3">36, rue de Saint Petersbourg</st86:FreeFormatNameAddressLine>
-									<st86:FreeFormatNameAddressLine sequenceNumber="4">75008 PARIS</st86:FreeFormatNameAddressLine>
-								</st86:FreeFormatAddressDetails>
+								<st86:FormattedNameAddress>
+									<st86:Name>
+										<st86:FormattedName>
+											<st86:FirstName>Pierre</st86:FirstName>
+											<st86:LastName>LECLERC</st86:LastName>
+											<st86:OrganizationName>Cabinet Orion</st86:OrganizationName>
+										</st86:FormattedName>
+										<fr:NameKindType>Natural Person</fr:NameKindType>
+									</st86:Name>
+									<st86:Address>
+										<st86:FormattedAddress>
+											<st86:AddressBuilding>36</st86:AddressBuilding>
+											<st86:AddressStreet>rue de Saint Petersbourg</st86:AddressStreet>
+											<st86:AddressCity>PARIS</st86:AddressCity>
+											<st86:AddressPostcode>75008</st86:AddressPostcode>
+											<st86:FormattedAddressCountryCode>FR</st86:FormattedAddressCountryCode>
+										</st86:FormattedAddress>
+									</st86:Address>
+								</st86:FormattedNameAddress>
 							</st86:CorrespondenceAddressBook>
 						</st86:CorrespondenceAddress>
 

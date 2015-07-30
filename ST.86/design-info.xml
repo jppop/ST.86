@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <st86:Transaction xmlns:st86="http://www.wipo.int/standards/XMLSchema/designs"
 	xmlns:fr="http://www.inpi.fr/standards/XMLSchema/designs" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.wipo.int/standards/XMLSchema/designs schemas/st86model-V1-0.xsd http://www.inpi.fr/standards/XMLSchema/designs schemas/st86model-V1.0-fr.xsd ">
+	xsi:schemaLocation="
+	http://www.wipo.int/standards/XMLSchema/designs schemas/st86model-V1-0.xsd
+	http://www.inpi.fr/standards/XMLSchema/designs schemas/st86model-V1.0-fr.xsd ">
 	<st86:TransactionHeader>
 		<st86:SenderDetails>
 			<st86:RequestProducer>BPI</st86:RequestProducer>
@@ -104,7 +106,7 @@
 
 						<st86:ApplicantDetails>
 							<st86:Applicant>
-								<st86:ApplicantIdentifier>urn:bpi:person:FR0020151799-01</st86:ApplicantIdentifier>
+								<st86:ApplicantIdentifier>urn:bpi:pax:FR0020151799-01</st86:ApplicantIdentifier>
 								<st86:ApplicantNationalityCode>FR</st86:ApplicantNationalityCode>
 								<st86:ApplicantAddressBook>
 									<st86:FormattedNameAddress>

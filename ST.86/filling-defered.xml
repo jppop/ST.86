@@ -70,7 +70,7 @@
 								</st86:IndicationProductDetails>
 								<st86:ApplicantDetails>
 									<st86:ApplicantKey>
-										<st86:Identifier>urn:siren:person:532 748 050</st86:Identifier>
+										<st86:Identifier>urn:siren:pax:532 748 050</st86:Identifier>
 										<!--Le déposant est désigné globalement pour le dépôt. Non nécessaire ici -->
 									</st86:ApplicantKey>
 								</st86:ApplicantDetails>
@@ -136,7 +136,7 @@
 								<!--Le déposant est désigné globalement pour le dépôt. Non nécessaire ici -->
 								<st86:ApplicantDetails>
 									<st86:ApplicantKey>
-										<st86:Identifier>urn:siren:person:532 748 050</st86:Identifier>
+										<st86:Identifier>urn:siren:pax:532 748 050</st86:Identifier>
 									</st86:ApplicantKey>
 								</st86:ApplicantDetails>
 
@@ -158,7 +158,7 @@
 						
 						<st86:ApplicantDetails>
 							<st86:Applicant>
-								<st86:ApplicantIdentifier>urn:siren:person:532 748 050</st86:ApplicantIdentifier>
+								<st86:ApplicantIdentifier>urn:siren:pax:532 748 050</st86:ApplicantIdentifier>
 								<st86:ApplicantNationalityCode>FR</st86:ApplicantNationalityCode>
 								<st86:ApplicantLegalEntity>Legal Entity</st86:ApplicantLegalEntity>
 								<st86:ApplicantAddressBook>
@@ -236,7 +236,7 @@
 						</st86:Authorization>
 
 						<st86:CorrespondenceAddress>
-							<st86:CorrespondenceAddressIdentifier>urn:ets:person:fr-172687</st86:CorrespondenceAddressIdentifier>
+							<st86:CorrespondenceAddressIdentifier>urn:ets:pax:fr-172687</st86:CorrespondenceAddressIdentifier>
 							<st86:CorrespondenceAddressParty>Representative</st86:CorrespondenceAddressParty>
 							<st86:CorrespondenceAddressBook>
 								<st86:FormattedNameAddress>

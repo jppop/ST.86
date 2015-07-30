@@ -12,6 +12,7 @@
 	<xs:element name="DesignerName" type="xs:string" />
 
     <xs:element name="LegalEntityKind" type="tns:LegalEntityKindType" />
+    <xs:element name="NameKind" type="st86:NameKindType" />
     
     <!-- Identifiant (SIREN) de l'organisation -->
     <xs:element name="EntityId" type="xs:string" />
