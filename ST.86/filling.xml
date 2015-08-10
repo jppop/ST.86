@@ -195,6 +195,7 @@
 												<st86:OrganizationName>Cabinet Orion</st86:OrganizationName>
 											</st86:FormattedName>
 											<fr:NameKindType>Natural Person</fr:NameKindType>
+											<fr:LegalEntityKind>SA (en cours)</fr:LegalEntityKind>
 										</st86:Name>
 										<st86:Address>
 											<st86:FormattedAddress>
@@ -229,6 +230,7 @@
 											<st86:OrganizationName>Cabinet Orion</st86:OrganizationName>
 										</st86:FormattedName>
 										<fr:NameKindType>Natural Person</fr:NameKindType>
+										<fr:LegalEntityKind>SA (en cours)</fr:LegalEntityKind>
 									</st86:Name>
 									<st86:Address>
 										<st86:FormattedAddress>
