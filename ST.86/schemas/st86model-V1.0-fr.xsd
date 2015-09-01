@@ -144,6 +144,7 @@
 			<xs:element name="ViewNumber" type="xs:string" minOccurs="0"/>
 			<xs:element name="Status" type="tns:ViewStatusType" minOccurs="0" />
 			<xs:element name="ExpiryDate" type="xs:date" minOccurs="0" />
+			<xs:element name="EndOfDefermentDate" type="xs:date" minOccurs="0" />
 		</xs:sequence>
     </xs:complexType>
 
@@ -199,6 +200,7 @@
 					</xs:sequence>
 				</xs:complexType>
 			</xs:element>
+			<xs:element name="NotificationIdentifier" type="xs:token" minOccurs="0"/>
 			<xs:element name="DocumentIncludedDetails" minOccurs="0">
 				<xs:complexType>
 					<xs:sequence>
@@ -210,6 +212,13 @@
 				<xs:complexType>
 					<xs:sequence>
 						<xs:element name="Staff" type="st86:StaffType" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="PaymentFeeDetails" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="PaymentFee" type="st86:PaymentFeeType" maxOccurs="unbounded"/>
 					</xs:sequence>
 				</xs:complexType>
 			</xs:element>
@@ -302,4 +311,9 @@
 	<xs:element name="PreferredResponseMethod"
 		type="tns:PreferredResponseMethodType">
 	</xs:element>
+	
+	<xs:element name="FeePaidAmount" type="st86:AmountType" />
+	<xs:element name="FeeRemainingAmount" type="st86:AmountType" />
+	<xs:element name="minQuantity" type="xs:integer" />
+	<xs:element name="maxQuantity" type="xs:integer" />
 </xs:schema>
