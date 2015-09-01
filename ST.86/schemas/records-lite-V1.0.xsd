@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.inpi.fr/standards/XMLSchema/records" xmlns="http://www.inpi.fr/standards/XMLSchema/records"
+	elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+	<xs:include schemaLocation="RecordKind.xsd" />
+	<xs:include
+		schemaLocation="http://www.wipo.int/standards/XMLSchema/common/WIPOST3CodeType-V2007.xsd" />
+
+	<xs:element name="Transaction" type="TransactionType"></xs:element>
+
+    <xs:complexType name="TransactionType">
+    	<xs:sequence>
+    		<xs:element name="TransactionBody" type="TransactionBodyType"></xs:element>
+    	</xs:sequence>
+    </xs:complexType>
+
+	<xs:complexType name="TransactionBodyType">
+		<xs:sequence>
+			<xs:element name="TransactionContentDetails">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="TransactionIdentifier" type="xs:string" minOccurs="0"/>
+						<xs:element name="TransactionCode" type="TransactionCodeType"/>
+						<xs:element name="TransactionData" type="TransactionDataType" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:simpleType name="TransactionCodeType">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="Record Registration"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:complexType name="TransactionDataType">
+		<xs:sequence>
+			<xs:element name="RecordIdentifier" type="xs:string" minOccurs="0"/>
+			<xs:element name="RecordFilingDate" type="xs:date" minOccurs="0"/>
+			<xs:element name="RecordEffectiveDate" type="xs:date" minOccurs="0"/>
+			<xs:element name="RecordKind" type="RecordKindListType" />
+			<xs:element name="RecordScope" type="RecordScopeType" />
+
+			<xs:element name="EntityKeyDetails" minOccurs="1">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="EntityKey" type="KeyType" minOccurs="1" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+
+			<xs:element name="RecordData" type="RecordDataType" minOccurs="0"/>
+
+			<xs:element name="ClaimantDetails" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:choice>
+							<xs:element name="ClaimantKey" type="KeyType" maxOccurs="unbounded"/>
+							<xs:element name="Claimant" type="ClaimantType" maxOccurs="unbounded"/>
+						</xs:choice>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+	
+			<xs:element name="Comment" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="RecordDataType">
+		<xs:sequence>
+			<xs:choice>
+				<xs:element name="PersonDetails">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="PersonRole" type="RoleType" minOccurs="0"/>
+							<xs:element name="RemovedPersons" type="PersonBagType" minOccurs="0"/>
+							<xs:element name="NewPersons" type="PersonBagType" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="NameOrAddressDetails">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="PersonRole" type="RoleType" minOccurs="0"/>
+							<xs:element name="RemovedPersons" type="PersonBagType" minOccurs="1"/>
+							<xs:element name="NewPersons" type="PersonBagType" minOccurs="1"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="NotApplicable">
+					<xs:complexType/>
+				</xs:element>
+				<xs:element name="Other">
+					<xs:complexType/>
+				</xs:element>
+			</xs:choice>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="PersonBagType">
+		<xs:sequence>
+			<xs:element name="Person" type="PersonType" minOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="PersonType">
+		<xs:sequence>
+			<xs:element name="Name" type="FormattedName" minOccurs="0"/>
+			<xs:element name="Address" type="FormattedAddressType" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="FormattedName">
+		<xs:sequence>
+			<xs:element name="FirstName" type="xs:string" minOccurs="0"/>
+			<xs:element name="LastName" type="xs:string" minOccurs="0"/>
+			<xs:element name="LegalIdentifier" type="xs:string" minOccurs="0"/>
+			<xs:element name="OrganizationName" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="FormattedAddressType">
+		<xs:sequence>
+			<xs:element name="AddressLine" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="AddressMailCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="AddressPostOfficeBox" type="xs:string" minOccurs="0"/>
+			<xs:element name="AddressRoom" type="xs:string" minOccurs="0"/>
+			<xs:element name="AddressFloor" type="xs:string" minOccurs="0"/>
+			<xs:element name="AddressBuilding" type="xs:string" minOccurs="0"/>
+			<xs:element name="AddressStreet" type="xs:string" minOccurs="0"/>
+			<xs:element name="AddressCity" type="xs:string" minOccurs="0"/>
+			<xs:element name="AddressCounty" type="xs:string" minOccurs="0"/>
+			<xs:element name="AddressState" type="xs:string" minOccurs="0"/>
+			<xs:element name="AddressPostcode" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:simpleType name="RecordScopeType">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="Design"/>
+			<xs:enumeration value="Trademark"/>
+			<xs:enumeration value="Patent"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+    <xs:simpleType name="RecordKindListType">
+		<xs:list itemType="RecordKindType" />
+    </xs:simpleType>
+
+	<xs:complexType name="KeyType">
+		<xs:sequence>
+			<xs:element name="Identifier" type="xs:token" minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:simpleType name="RoleType">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="Licensee"/>
+			<xs:enumeration value="Mortgagee"/>
+			<xs:enumeration value="Owner"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:complexType name="ClaimantType">
+		<xs:sequence>
+			<xs:element name="ClaimantIdentifier" type="IdentifierType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="ClaimantSequenceNumber" type="xs:integer" minOccurs="0"/>
+			<xs:element name="ClaimantAddressBook" type="PersonType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="IdentifierType">
+		<xs:simpleContent>
+			<xs:extension base="xs:token">
+				<xs:attribute name="identifierKindCode" type="WIPOST3CodeType" use="optional"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+
+</xs:schema>
