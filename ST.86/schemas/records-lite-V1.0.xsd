@@ -37,67 +37,100 @@
 	
 	<xs:complexType name="TransactionDataType">
 		<xs:sequence>
-			<xs:element name="RecordIdentifier" type="xs:string" minOccurs="0"/>
-			<xs:element name="RecordFilingDate" type="xs:date" minOccurs="0"/>
-			<xs:element name="RecordEffectiveDate" type="xs:date" minOccurs="0"/>
-			<xs:element name="RecordKind" type="RecordKindListType" />
-			<xs:element name="RecordScope" type="RecordScopeType" />
+			<xs:element name="RecordIdentifier" type="xs:string"
+				minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>
+						Numéro d'inscription
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="RecordSequenceNumber" type="xs:string"
+				minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>
+						Numéro d'ordre de l'inscription
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="RecordFilingDate" type="xs:date"
+				minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+						Date de la demande
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="RecordKind" type="RecordKindListType">
+				<xs:annotation>
+					<xs:documentation>
+						Liste des codes natures
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="RecordScope" type="RecordScopeType">
+				<xs:annotation>
+					<xs:documentation>
+						Type de titre (DM, Marque ou Brevet)
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 
 			<xs:element name="EntityKeyDetails" minOccurs="1">
+				<xs:annotation>
+					<xs:documentation>
+						Identifiant(s) des titres
+					</xs:documentation>
+				</xs:annotation>
 				<xs:complexType>
 					<xs:sequence>
-						<xs:element name="EntityKey" type="KeyType" minOccurs="1" maxOccurs="unbounded"/>
+						<xs:element name="EntityKey" type="KeyType"
+							minOccurs="1" maxOccurs="unbounded" />
 					</xs:sequence>
 				</xs:complexType>
 			</xs:element>
 
-			<xs:element name="RecordData" type="RecordDataType" minOccurs="0"/>
 
 			<xs:element name="ClaimantDetails" minOccurs="0">
 				<xs:complexType>
 					<xs:sequence>
 						<xs:choice>
-							<xs:element name="ClaimantKey" type="KeyType" maxOccurs="unbounded"/>
-							<xs:element name="Claimant" type="ClaimantType" maxOccurs="unbounded"/>
+							<xs:element name="ClaimantKey"
+								type="KeyType" maxOccurs="unbounded" />
+							<xs:element name="Claimant"
+								type="ClaimantType" maxOccurs="unbounded" />
 						</xs:choice>
 					</xs:sequence>
 				</xs:complexType>
 			</xs:element>
-	
-			<xs:element name="Comment" type="xs:string" />
+
+			<xs:element name="BeneficiaryDetails" maxOccurs="1" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:choice>
+							<xs:element name="BeneficiaryKey"
+								type="KeyType" maxOccurs="unbounded" />
+							<xs:element name="Beneficiary"
+								type="BeneficiaryType" maxOccurs="unbounded" />
+						</xs:choice>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="RepresentativeDetails" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:choice>
+							<xs:element name="RepresentativeKey" type="KeyType" maxOccurs="1" minOccurs="0"/>
+							<xs:element name="Representative" type="RepresentativeType" maxOccurs="1" minOccurs="0"/>
+						</xs:choice>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="PublicationDetails" type="PublicationType" maxOccurs="1" minOccurs="0"></xs:element>
+			<xs:element name="Comment" type="xs:string" maxOccurs="1" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
 
-	<xs:complexType name="RecordDataType">
-		<xs:sequence>
-			<xs:choice>
-				<xs:element name="PersonDetails">
-					<xs:complexType>
-						<xs:sequence>
-							<xs:element name="PersonRole" type="RoleType" minOccurs="0"/>
-							<xs:element name="RemovedPersons" type="PersonBagType" minOccurs="0"/>
-							<xs:element name="NewPersons" type="PersonBagType" minOccurs="0"/>
-						</xs:sequence>
-					</xs:complexType>
-				</xs:element>
-				<xs:element name="NameOrAddressDetails">
-					<xs:complexType>
-						<xs:sequence>
-							<xs:element name="PersonRole" type="RoleType" minOccurs="0"/>
-							<xs:element name="RemovedPersons" type="PersonBagType" minOccurs="1"/>
-							<xs:element name="NewPersons" type="PersonBagType" minOccurs="1"/>
-						</xs:sequence>
-					</xs:complexType>
-				</xs:element>
-				<xs:element name="NotApplicable">
-					<xs:complexType/>
-				</xs:element>
-				<xs:element name="Other">
-					<xs:complexType/>
-				</xs:element>
-			</xs:choice>
-		</xs:sequence>
-	</xs:complexType>
 
 	<xs:complexType name="PersonBagType">
 		<xs:sequence>
@@ -107,8 +140,11 @@
 
 	<xs:complexType name="PersonType">
 		<xs:sequence>
-			<xs:element name="Name" type="FormattedName" minOccurs="0"/>
-			<xs:element name="Address" type="FormattedAddressType" minOccurs="0" />
+			<xs:element name="PersonIdentifier" type="KeyType" maxOccurs="unbounded" minOccurs="0"></xs:element>
+			<xs:element name="Role" type="RoleType" maxOccurs="1" minOccurs="0"></xs:element>
+			<xs:element name="Name" type="FormattedName" minOccurs="0" />
+			<xs:element name="Address" type="FormattedAddressType"
+				minOccurs="0" />
 		</xs:sequence>
 	</xs:complexType>
 
@@ -171,6 +207,23 @@
 		</xs:sequence>
 	</xs:complexType>
 
+	<xs:complexType name="BeneficiaryType">
+		<xs:sequence>
+			<xs:element name="BeneficiaryIdentifier" type="IdentifierType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="BeneficiarySequenceNumber" type="xs:integer" minOccurs="0"/>
+			<xs:element name="BeneficiaryAddressBook" type="PersonType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="RepresentativeType">
+		<xs:sequence>
+			<xs:element name="RepresentativeIdentifier" type="IdentifierType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="RepresentativeSequenceNumber" type="xs:integer" minOccurs="0"/>
+			<xs:element name="RepresentativeKindCode" type="RepresentativeKindCodeType" minOccurs="0"/>
+			<xs:element name="RepresentativeAddressBook" type="PersonType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+
 	<xs:complexType name="IdentifierType">
 		<xs:simpleContent>
 			<xs:extension base="xs:token">
@@ -179,4 +232,59 @@
 		</xs:simpleContent>
 	</xs:complexType>
 
+	<xs:complexType name="PublicationType">
+		<xs:sequence>
+			<xs:element name="PublicationIdentifier" type="xs:string"/>
+			<xs:element name="PublicationSection" type="PublicationSectionType" minOccurs="0"/>
+			<xs:element name="PublicationSubsection" type="PublicationSubsectionType" minOccurs="0"/>
+			<xs:element name="PublicationDate" type="xs:date" minOccurs="0"/>
+			<xs:element name="PublicationPage" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:simpleType name="PublicationSectionType">
+		<xs:union memberTypes="xs:token">
+			<xs:simpleType>
+				<xs:restriction base="xs:token">
+					<xs:enumeration value="Applications"/>
+					<xs:enumeration value="Amendments to applications"/>
+					<xs:enumeration value="Correction of errors on applications"/>
+					<xs:enumeration value="Withdrawals"/>
+					<xs:enumeration value="Limitations"/>
+					<xs:enumeration value="Total refusals"/>
+					<xs:enumeration value="Partial refusals"/>
+					<xs:enumeration value="Registrations with no amendments"/>
+					<xs:enumeration value="Registrations with amendments"/>
+					<xs:enumeration value="Correction of errors on registrations"/>
+					<xs:enumeration value="Total transfers"/>
+					<xs:enumeration value="Partial transfers"/>
+					<xs:enumeration value="Change of name and address of proprietor"/>
+					<xs:enumeration value="Change of name and professional address of representative"/>
+					<xs:enumeration value="Replacement of representative"/>
+					<xs:enumeration value="Appointment of a new representative"/>
+					<xs:enumeration value="Deletion of the representative"/>
+					<xs:enumeration value="Total surrender of designs"/>
+					<xs:enumeration value="Partial surrender of designs"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="PublicationSubsectionType">
+		<xs:union memberTypes="xs:token xs:token"/>
+	</xs:simpleType>
+
+	<xs:simpleType name="RepresentativeKindCodeType">
+		<xs:union memberTypes="xs:token">
+			<xs:simpleType>
+				<xs:restriction base="xs:token">
+					<xs:enumeration value="Professional Representative"/>
+					<xs:enumeration value="Lawyer"/>
+					<xs:enumeration value="Association"/>
+					<xs:enumeration value="Employee"/>
+					<xs:enumeration value="Other"/>
+					<xs:enumeration value="Undefined"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
 </xs:schema>
