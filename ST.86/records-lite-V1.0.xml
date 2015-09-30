@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r:Transaction xmlns:r="http://www.inpi.fr/standards/XMLSchema/records" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.inpi.fr/standards/XMLSchema/records schemas/records-lite-V1.0.xsd ">
+  <r:TransactionBody>
+    <r:TransactionContentDetails>
+      <r:TransactionCode>Record Registration</r:TransactionCode>
+      <r:TransactionData>
+        <r:RecordIdentifier>r:RecordIdentifier</r:RecordIdentifier>
+        <r:RecordKind>AM</r:RecordKind>
+        <r:RecordScope>Design</r:RecordScope>
+        <r:EntityKeyDetails>
+          <r:EntityKey>
+            <r:Identifier>token</r:Identifier>
+          </r:EntityKey>
+        </r:EntityKeyDetails>
+      </r:TransactionData>
+    </r:TransactionContentDetails>
+  </r:TransactionBody>
+</r:Transaction>
