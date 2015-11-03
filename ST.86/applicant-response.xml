@@ -60,6 +60,6 @@
 				</fr:DocumentIncluded>
 			</fr:DocumentIncludedDetails>
 			
-		</fr:ApplicantResponseBody>
-	</fr:ApplicantResponse>
+		</fr:ResponseBody>
+	</fr:Response>
 </st86:Transaction>

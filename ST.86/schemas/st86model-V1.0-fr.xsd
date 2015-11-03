@@ -140,8 +140,10 @@
 
     <xs:complexType name="ViewDetailsType">
 		<xs:sequence>
-			<xs:element name="ViewSequenceNumber" type="xs:string"></xs:element>
+			<xs:element name="ViewSequenceNumber" type="xs:string" />
 			<xs:element name="ViewNumber" type="xs:string" minOccurs="0"/>
+			<xs:element name="ViewDescription" type="xs:string" minOccurs="0"/>
+			<xs:element name="ViewNature" type="xs:string" minOccurs="0"/>
 			<xs:element name="Status" type="tns:ViewStatusType" minOccurs="0" />
 			<xs:element name="ExpiryDate" type="xs:date" minOccurs="0" />
 			<xs:element name="EndOfDefermentDate" type="xs:date" minOccurs="0" />
