@@ -56,6 +56,13 @@
 								</st86:Claimant>
 
 							</st86:ClaimantDetails>
+							<st86:RecordEventDetails>
+							    <st86:RecordEvent>
+							        <st86:RecordEventDate>2015-12-09</st86:RecordEventDate>
+							        <st86:RecordEventCode>Notification</st86:RecordEventCode>
+							        <st86:Comment>un commentaire</st86:Comment>
+							    </st86:RecordEvent>
+							</st86:RecordEventDetails>
 							<st86:CorrespondenceAddress>
 								<st86:CorrespondenceAddressIdentifier>urn:ets:pax:FR2015-980980</st86:CorrespondenceAddressIdentifier>
 							</st86:CorrespondenceAddress>

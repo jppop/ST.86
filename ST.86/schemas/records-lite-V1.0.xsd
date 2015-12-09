@@ -154,6 +154,7 @@
 			<xs:element name="LastName" type="xs:string" minOccurs="0"/>
 			<xs:element name="LegalIdentifier" type="xs:string" minOccurs="0"/>
 			<xs:element name="OrganizationName" type="xs:string" minOccurs="0"/>
+            <xs:element name="IndividualIdentifier" type="xs:string" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
 

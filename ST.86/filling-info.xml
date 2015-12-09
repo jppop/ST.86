@@ -27,7 +27,6 @@
 						<st86:DesignDetails>
 							<st86:Design>
 								<st86:DesignIdentifier>urn:inpi:design:20152801-001</st86:DesignIdentifier>
-								<st86:DesignTitle>??? st86:DesignTitle ???</st86:DesignTitle>
 								<st86:DesignDescription>Luminaire "dents de loup" réalisé avec des crochets de boucher et une dalle LED lumineuse</st86:DesignDescription>
 								<st86:ColourIndicator>true</st86:ColourIndicator>
 								<st86:PublicationInColourIndicator>true</st86:PublicationInColourIndicator>
@@ -46,11 +45,6 @@
 												<st86:ViewTitle>Vue en perspective du luminaire</st86:ViewTitle>
 												<st86:ViewColourIndicator>false</st86:ViewColourIndicator>
 												<st86:ViewKind>Image</st86:ViewKind>
-												<st86:ViewRepresentationSize>
-													<st86:Height>351</st86:Height>
-													<st86:Width>498</st86:Width>
-													<st86:Unit>Pixel</st86:Unit>
-												</st86:ViewRepresentationSize>
 												<fr:ViewDetailsEx>
 													<fr:ViewSequenceNumber>1.1</fr:ViewSequenceNumber>
 												</fr:ViewDetailsEx>
@@ -68,11 +62,6 @@
 												<st86:ViewTitle>Vue de détail du luminaire</st86:ViewTitle>
 												<st86:ViewColourIndicator>false</st86:ViewColourIndicator>
 												<st86:ViewKind>Image</st86:ViewKind>
-												<st86:ViewRepresentationSize>
-													<st86:Height>275</st86:Height>
-													<st86:Width>498</st86:Width>
-													<st86:Unit>Pixel</st86:Unit>
-												</st86:ViewRepresentationSize>
 												<fr:ViewDetailsEx>
 													<fr:ViewSequenceNumber>1.2</fr:ViewSequenceNumber>
 												</fr:ViewDetailsEx>
@@ -90,11 +79,6 @@
 												<st86:ViewTitle>Luminaire vue de dessous</st86:ViewTitle>
 												<st86:ViewColourIndicator>true</st86:ViewColourIndicator>
 												<st86:ViewKind>Image</st86:ViewKind>
-												<st86:ViewRepresentationSize>
-													<st86:Height>470</st86:Height>
-													<st86:Width>498</st86:Width>
-													<st86:Unit>Pixel</st86:Unit>
-												</st86:ViewRepresentationSize>
 												<fr:ViewDetailsEx>
 													<fr:ViewSequenceNumber>1.3</fr:ViewSequenceNumber>
 												</fr:ViewDetailsEx>

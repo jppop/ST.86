@@ -1,321 +1,374 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-	targetNamespace="http://www.inpi.fr/standards/XMLSchema/designs"
-	xmlns:tns="http://www.inpi.fr/standards/XMLSchema/designs"
-	xmlns:st86="http://www.wipo.int/standards/XMLSchema/designs"
-	elementFormDefault="qualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.inpi.fr/standards/XMLSchema/designs" xmlns:tns="http://www.inpi.fr/standards/XMLSchema/designs" xmlns:st86="http://www.wipo.int/standards/XMLSchema/designs"
+    elementFormDefault="qualified">
 
-	<xs:import namespace="http://www.wipo.int/standards/XMLSchema/designs"  schemaLocation="st86model-V1-0.xsd" />
-	<xs:include schemaLocation="RecordKind.xsd"/>
-	
-	<xs:element name="SystemIdentifier" type="xs:token" />
-	<xs:element name="DesignerName" type="xs:string" />
+    <xs:import namespace="http://www.wipo.int/standards/XMLSchema/designs" schemaLocation="st86model-V1-0.xsd" />
+    <xs:include schemaLocation="RecordKind.xsd" />
+
+    <xs:element name="FaxIndicator" type="xs:boolean" />
+    <xs:element name="FaxConfirmationIndicator" type="xs:boolean" />
+    <xs:element name="PaymentDetails">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Payment" type="st86:PaymentType" maxOccurs="unbounded" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="AddressCountryCode" type="st86:ISOCountryCodeType" />
+    <xs:element name="DesignCurrentStatusCodeEx" type="st86:DesignCurrentStatusCodeType" />
+
+    <xs:element name="SystemIdentifier" type="xs:string" />
+    <xs:element name="ViewNumber" type="xs:string" />
+    <xs:element name="DesignerName" type="xs:string" />
 
     <xs:element name="LegalEntityKind" type="tns:LegalEntityKindType" />
     <xs:element name="NameKind" type="st86:NameKindType" />
-    
+
     <!-- Identifiant (SIREN) de l'organisation -->
-    <xs:element name="EntityId" type="xs:string" />
-    
+    <xs:element name="EntityIdentifier" type="xs:string" />
+
     <xs:element name="SignatoryCapacityDetails" type="tns:SignatoryCapacityDetailsType"></xs:element>
 
     <xs:element name="ApplicationAreaExtension">
-    	<xs:complexType>
-    		<xs:sequence minOccurs="1" maxOccurs="unbounded">
-    			<xs:element name="extension" type="tns:ApplicationAreaExtensionType" />
-    		</xs:sequence>
-    	</xs:complexType>
+        <xs:complexType>
+            <xs:sequence minOccurs="1" maxOccurs="unbounded">
+                <xs:element name="extension" type="tns:ApplicationAreaExtensionType" />
+            </xs:sequence>
+        </xs:complexType>
     </xs:element>
 
     <xs:element name="ApplicationTimeExtension">
-    	<xs:complexType>
-    		<xs:sequence minOccurs="1" maxOccurs="unbounded">
-    			<xs:element name="extension" type="st86:PeriodType" />
-    		</xs:sequence>
-    	</xs:complexType>
+        <xs:complexType>
+            <xs:sequence minOccurs="1" maxOccurs="unbounded">
+                <xs:element name="extension" type="st86:PeriodType" />
+            </xs:sequence>
+        </xs:complexType>
     </xs:element>
 
     <xs:element name="RecordKind" type="tns:RecordKindListType" />
 
     <xs:simpleType name="RecordKindListType">
-		<xs:list itemType="tns:RecordKindType" />
+        <xs:list itemType="tns:RecordKindType" />
     </xs:simpleType>
 
     <xs:simpleType name="ApplicationAreaExtensionType">
-		<xs:restriction base="xs:token">
-			<xs:enumeration value="Polynésie Française"/>
-			<xs:enumeration value="Nouvelle Calédonie"/>
-		</xs:restriction>
+        <xs:restriction base="xs:token">
+            <xs:enumeration value="Polynésie Française" />
+            <xs:enumeration value="Nouvelle Calédonie" />
+        </xs:restriction>
     </xs:simpleType>
 
-	<xs:complexType name="SignatoryCapacityDetailsType">
-		<xs:sequence>
-			<xs:element name="RepresentativeDetail" type="tns:RepresentativeType" />
-			<xs:element name="RepresentativeIdentifier" type="xs:string" minOccurs="0"/>
-		</xs:sequence>
-	</xs:complexType>
+    <xs:complexType name="SignatoryCapacityDetailsType">
+        <xs:sequence>
+            <xs:element name="RepresentativeDetail" type="tns:RepresentativeType" />
+            <xs:element name="RepresentativeIdentifier" type="xs:string" minOccurs="0" />
+        </xs:sequence>
+    </xs:complexType>
 
     <xs:simpleType name="RepresentativeType">
- 		<xs:union memberTypes="xs:token">
-			<xs:simpleType>
-				<xs:restriction base="xs:token">
-		    		<xs:enumeration value="CPI" />
-		    		<xs:enumeration value="L422-5" />
-		    		<xs:enumeration value="Lawyer" />
-				</xs:restriction>
-			</xs:simpleType>
-		</xs:union>
+        <xs:union memberTypes="xs:token">
+            <xs:simpleType>
+                <xs:restriction base="xs:token">
+                    <xs:enumeration value="CPI" />
+                    <xs:enumeration value="L422-5" />
+                    <xs:enumeration value="Lawyer" />
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:union>
     </xs:simpleType>
 
     <xs:simpleType name="LegalEntityKindType">
- 		<xs:union memberTypes="xs:token">
-			<xs:simpleType>
-				<xs:restriction base="xs:token">
-		    		<xs:enumeration value="SA" />
-		    		<xs:enumeration value="Société Anonyme" />
-		    		<xs:enumeration value="SAS" />
-		    		<xs:enumeration value="SARL" />
-		    		<xs:enumeration value="EURL" />
-		    		<xs:enumeration value="Association" />
-				</xs:restriction>
-			</xs:simpleType>
-		</xs:union>
+        <xs:union memberTypes="xs:token">
+            <xs:simpleType>
+                <xs:restriction base="xs:token">
+                    <xs:enumeration value="SA" />
+                    <xs:enumeration value="Société Anonyme" />
+                    <xs:enumeration value="SAS" />
+                    <xs:enumeration value="SARL" />
+                    <xs:enumeration value="EURL" />
+                    <xs:enumeration value="Association" />
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:union>
     </xs:simpleType>
 
-	<xs:element name="DesignEventCodeEx" type="tns:DesignEventCodeExType" />
-	
+    <xs:element name="DesignEventCodeEx" type="tns:DesignEventCodeExType" />
+
     <xs:simpleType name="DesignEventCodeExType">
-    <!-- TODO: to be completed -->
- 		<xs:union memberTypes="xs:token">
-			<xs:simpleType>
-				<xs:restriction base="xs:token">
-		    		<xs:enumeration value="Filed" />
-					<xs:enumeration value="Withdrawn"/>
-					<xs:enumeration value="Rejected"/>
-					<xs:enumeration value="Expired"/>
-		    		<xs:enumeration value="Registered and fully published" />
-				</xs:restriction>
-			</xs:simpleType>
-		</xs:union>
+        <!-- TODO: to be completed -->
+        <xs:union memberTypes="xs:token">
+            <xs:simpleType>
+                <xs:restriction base="xs:token">
+                    <xs:enumeration value="Filed" />
+                    <xs:enumeration value="Withdrawn" />
+                    <xs:enumeration value="Rejected" />
+                    <xs:enumeration value="Expired" />
+                    <xs:enumeration value="Registered and fully published" />
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:union>
     </xs:simpleType>
 
     <xs:simpleType name="TransactionKindType">
- 		<xs:union memberTypes="xs:token">
-			<xs:simpleType>
-				<xs:restriction base="xs:token">
-		    		<xs:enumeration value="Filing" />
-					<xs:enumeration value="Renewal"/>
-					<xs:enumeration value="Recording"/>
-					<xs:enumeration value="Withdrawal"/>
-				</xs:restriction>
-			</xs:simpleType>
-		</xs:union>
+        <xs:union memberTypes="xs:token">
+            <xs:simpleType>
+                <xs:restriction base="xs:token">
+                    <xs:enumeration value="Filing" />
+                    <xs:enumeration value="Renewal" />
+                    <xs:enumeration value="Recording" />
+                    <xs:enumeration value="Withdrawal" />
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:union>
     </xs:simpleType>
 
     <xs:element name="DesignEventExDetails" type="tns:DesignEventExDetailsType" />
 
     <xs:complexType name="DesignEventExDetailsType">
-    	<xs:sequence>
-			<xs:element name="DesignEventCodeEx" type="tns:DesignEventCodeExType" />
-			<xs:element name="ViewLimitation" type="tns:ViewLimitationType" minOccurs="0"/>
-			<xs:element name="TransactionKind" type="tns:TransactionKindType" minOccurs="0"/>
-			<xs:element name="DesignBasicRecord" type="st86:DesignBasicRecordType" minOccurs="0"/>
-    	</xs:sequence>
+        <xs:sequence>
+            <xs:element name="DesignEventCodeEx" type="tns:DesignEventCodeExType" />
+            <xs:element name="ViewLimitation" type="tns:ViewLimitationType" minOccurs="0" />
+            <xs:element name="TransactionKind" type="tns:TransactionKindType" minOccurs="0" />
+            <xs:element name="DesignBasicRecord" type="st86:DesignBasicRecordType" minOccurs="0" />
+        </xs:sequence>
     </xs:complexType>
 
     <xs:element name="ViewLimitation" type="tns:ViewLimitationType" />
-    
+
     <xs:complexType name="ViewLimitationType">
-    	<xs:annotation>
-    		<xs:documentation>
-    			Scope of the modification (partial modification)
-    		</xs:documentation>
-    	</xs:annotation>
-    	<xs:sequence>
-    		<xs:element name="ViewNumber" type="xs:string" maxOccurs="unbounded" />
-    	</xs:sequence>
+        <xs:annotation>
+            <xs:documentation>
+                Scope of the modification (partial modification)
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="ViewNumber" type="xs:string" maxOccurs="unbounded" />
+        </xs:sequence>
     </xs:complexType>
 
     <xs:element name="ViewDetailsEx" type="tns:ViewDetailsType"></xs:element>
 
     <xs:complexType name="ViewDetailsType">
-		<xs:sequence>
-			<xs:element name="ViewSequenceNumber" type="xs:string" />
-			<xs:element name="ViewNumber" type="xs:string" minOccurs="0"/>
-			<xs:element name="ViewDescription" type="xs:string" minOccurs="0"/>
-			<xs:element name="ViewNature" type="xs:string" minOccurs="0"/>
-			<xs:element name="Status" type="tns:ViewStatusType" minOccurs="0" />
-			<xs:element name="ExpiryDate" type="xs:date" minOccurs="0" />
-			<xs:element name="EndOfDefermentDate" type="xs:date" minOccurs="0" />
-		</xs:sequence>
+        <xs:sequence>
+            <xs:element name="ViewSequenceNumber" type="xs:string"></xs:element>
+            <xs:element name="ViewNumber" type="xs:string" minOccurs="0" />
+            <xs:element name="ViewDescription" type="xs:string" minOccurs="0" />
+            <xs:element name="ViewNature" type="xs:string" minOccurs="0" />
+            <xs:element name="Status" type="tns:ViewStatusType" minOccurs="0" />
+            <xs:element name="ExpiryDate" type="xs:date" minOccurs="0" />
+            <xs:element name="EndOfDefermentDate" type="xs:date" minOccurs="0" />
+        </xs:sequence>
     </xs:complexType>
 
     <xs:simpleType name="ViewStatusType">
- 		<xs:union memberTypes="xs:token">
-			<xs:simpleType>
-				<xs:restriction base="xs:token">
-		    		<xs:enumeration value="Filed" />
-					<xs:enumeration value="Withdrawn"/>
-					<xs:enumeration value="Rejected"/>
-					<xs:enumeration value="Expired"/>
-					<xs:enumeration value="Expiring"/>
-		    		<xs:enumeration value="Published" />
-				</xs:restriction>
-			</xs:simpleType>
-		</xs:union>
+        <xs:union memberTypes="xs:token tns:EnViewStatusCode tns:FrViewStatusCode" />
+    </xs:simpleType>
+
+    <xs:simpleType name="FrViewStatusCode">
+        <xs:restriction base="xs:token">
+            <xs:enumeration value="Non examinée" />
+            <xs:enumeration value="Rejetée" />
+            <xs:enumeration value="Publiable" />
+            <xs:enumeration value="Publiable ajournée" />
+            <xs:enumeration value="Ajournée" />
+            <xs:enumeration value="Irrégulière" />
+            <xs:enumeration value="Irrecevable" />
+            <xs:enumeration value="Divisionnaire" />
+            <xs:enumeration value="Retirée" />
+            <xs:enumeration value="A déchoir" />
+            <xs:enumeration value="Déchue" />
+            <xs:enumeration value="Publiée" />
+            <xs:enumeration value="Prorogée 10 ans" />
+            <xs:enumeration value="Prorogée 15 ans" />
+            <xs:enumeration value="Prorogée 20 ans" />
+            <xs:enumeration value="Prorogée 25 ans" />
+            <xs:enumeration value="Déposée 5 ans" />
+            <xs:enumeration value="Déposée 5 ans et prorogée 10 ans" />
+            <xs:enumeration value="Remplacée" />
+            <xs:enumeration value="Transférée" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="EnViewStatusCode">
+        <xs:restriction base="xs:token">
+            <xs:enumeration value="Filed" />
+            <xs:enumeration value="Withdrawn" />
+            <xs:enumeration value="Rejected" />
+            <xs:enumeration value="Expired" />
+            <xs:enumeration value="Expiring" />
+            <xs:enumeration value="Published" />
+            <xs:enumeration value="Defered" />
+        </xs:restriction>
     </xs:simpleType>
 
     <xs:element name="Request" type="tns:RequestType"></xs:element>
 
     <xs:complexType name="RequestType">
-		<xs:sequence>
-			<xs:element name="TransactionHeader" type="st86:TransactionHeaderType" minOccurs="0"/>
-			<xs:element name="RequestBody" type="tns:ExchangeBodyType" maxOccurs="unbounded"/>
-		</xs:sequence>
+        <xs:sequence>
+            <xs:element name="TransactionHeader" type="st86:TransactionHeaderType" minOccurs="0" />
+            <xs:element name="RequestBody" type="tns:ExchangeBodyType" maxOccurs="unbounded" />
+        </xs:sequence>
     </xs:complexType>
 
     <xs:element name="Response" type="tns:ResponseType"></xs:element>
 
     <xs:complexType name="ResponseType">
-		<xs:sequence>
-			<xs:element name="TransactionHeader" type="st86:TransactionHeaderType" minOccurs="0"/>
-			<xs:element name="ResponseBody" type="tns:ExchangeBodyType" maxOccurs="unbounded"/>
-		</xs:sequence>
+        <xs:sequence>
+            <xs:element name="TransactionHeader" type="st86:TransactionHeaderType" minOccurs="0" />
+            <xs:element name="ResponseBody" type="tns:ExchangeBodyType" maxOccurs="unbounded" />
+        </xs:sequence>
     </xs:complexType>
 
     <xs:complexType name="ExchangeBodyType">
-		<xs:sequence>
-			<xs:element name="TransactionIdentifier" type="xs:string" minOccurs="0"/>
-			<xs:element name="TransactionCode" type="st86:TransactionCodeType"/>
-			<xs:choice minOccurs="0">
-				<xs:element name="DesignKey" type="st86:KeyType"/>
-				<xs:element name="RecordKey" type="st86:KeyType"/>
-			</xs:choice>
-			<xs:choice>
-				<xs:element name="CorrespondenceAddressKey" type="st86:CorrespondenceAddressKeyType" minOccurs="0"/>
-				<xs:element name="CorrespondenceAddress" type="st86:CorrespondenceAddressType" minOccurs="0"/>
-			</xs:choice>
-			<xs:element name="DesignEventDetails" minOccurs="0">
-				<xs:complexType>
-					<xs:sequence>
-						<xs:element name="DesignEvent" type="st86:DesignEventType" maxOccurs="unbounded"/>
-					</xs:sequence>
-				</xs:complexType>
-			</xs:element>
-			<xs:element name="NotificationIdentifier" type="xs:token" minOccurs="0"/>
-			<xs:element name="DocumentIncludedDetails" minOccurs="0">
-				<xs:complexType>
-					<xs:sequence>
-						<xs:element name="DocumentIncluded" type="st86:DocumentType" maxOccurs="unbounded"/>
-					</xs:sequence>
-				</xs:complexType>
-			</xs:element>
-			<xs:element name="StaffDetails" minOccurs="0">
-				<xs:complexType>
-					<xs:sequence>
-						<xs:element name="Staff" type="st86:StaffType" maxOccurs="unbounded"/>
-					</xs:sequence>
-				</xs:complexType>
-			</xs:element>
-			<xs:element name="PaymentFeeDetails" minOccurs="0">
-				<xs:complexType>
-					<xs:sequence>
-						<xs:element name="PaymentFee" type="st86:PaymentFeeType" maxOccurs="unbounded"/>
-					</xs:sequence>
-				</xs:complexType>
-			</xs:element>
-		</xs:sequence>
+        <xs:sequence>
+            <xs:element name="TransactionIdentifier" type="xs:string" minOccurs="0" />
+            <xs:element name="TransactionCode" type="st86:TransactionCodeType" />
+            <xs:choice minOccurs="0">
+                <xs:element name="DesignKey" type="st86:KeyType" />
+                <xs:element name="RecordKey" type="st86:KeyType" />
+            </xs:choice>
+            <xs:choice>
+                <xs:element name="CorrespondenceAddressKey" type="st86:CorrespondenceAddressKeyType" minOccurs="0" />
+                <xs:element name="CorrespondenceAddress" type="st86:CorrespondenceAddressType" minOccurs="0" />
+            </xs:choice>
+            <xs:element name="DesignEventDetails" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="DesignEvent" type="st86:DesignEventType" maxOccurs="unbounded" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="NotificationIdentifier" type="xs:token" minOccurs="0" />
+            <xs:element name="DocumentIncludedDetails" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="DocumentIncluded" type="st86:DocumentType" maxOccurs="unbounded" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="StaffDetails" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="Staff" type="st86:StaffType" maxOccurs="unbounded" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="PaymentFeeDetails" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="PaymentFee" type="st86:PaymentFeeType" maxOccurs="unbounded" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
     </xs:complexType>
-    
+
     <xs:simpleType name="DocumentCategoryType">
- 		<xs:union memberTypes="xs:token">
-			<xs:simpleType>
-				<xs:restriction base="xs:token">
-					<xs:enumeration value="application"/>
-					<xs:enumeration value="representation sheet"/>
-					<xs:enumeration value="view"/>
-		    		<xs:enumeration value="authorization" />
-		    		<xs:enumeration value="other" />
-				</xs:restriction>
-			</xs:simpleType>
-		</xs:union>
+        <xs:union memberTypes="xs:token">
+            <xs:simpleType>
+                <xs:restriction base="xs:token">
+                    <xs:enumeration value="application" />
+                    <xs:enumeration value="representation sheet" />
+                    <xs:enumeration value="view" />
+                    <xs:enumeration value="authorization" />
+                    <xs:enumeration value="other" />
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:union>
     </xs:simpleType>
 
     <xs:element name="DocumentCategory" type="tns:DocumentCategoryType"></xs:element>
-    
-	<xs:element name="SignatoryDetails">
-		<xs:complexType>
-			<xs:sequence>
-				<xs:element name="Signatory" type="st86:SignatoryType" maxOccurs="unbounded"/>
-			</xs:sequence>
-		</xs:complexType>
-	</xs:element>
 
-	<xs:element name="CorrespondenceAddress" type="st86:CorrespondenceAddressType"/>
+    <xs:element name="SignatoryDetails">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Signatory" type="st86:SignatoryType" maxOccurs="unbounded" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
 
-	<xs:element name="DesignApplicationCurrentStatusCodeEx" type="tns:DesignApplicationCurrentStatusCodeExType"/>
-	
-	<xs:simpleType name="DesignApplicationCurrentStatusCodeExType">
-		<xs:restriction base="xs:token">
-			<xs:enumeration value="Reçu"/>
-			<xs:enumeration value="Irrecevable"/>
-			<xs:enumeration value="Recevable"/>
-			<xs:enumeration value="Irrégulier fond"/>
-			<xs:enumeration value="Irrégulier forme"/>
-			<xs:enumeration value="Irrégulier fond et forme"/>
-			<xs:enumeration value="Rejet Partiel"/>
-			<xs:enumeration value="Rejet Total"/>
-		</xs:restriction>
-	</xs:simpleType>
+    <xs:element name="CorrespondenceAddress" type="st86:CorrespondenceAddressType" />
 
-	<xs:element name="CorrectionDetails"
-		type="tns:CorrectionDetailsType">
-	</xs:element>
+    <xs:element name="DesignApplicationCurrentStatusCodeEx" type="tns:DesignApplicationCurrentStatusCodeExType" />
 
-	<xs:complexType name="CorrectionDetailsType">
+    <xs:simpleType name="DesignApplicationCurrentStatusCodeExType">
+        <xs:restriction base="xs:token">
+            <xs:enumeration value="Reçu" />
+            <xs:enumeration value="Irrecevable" />
+            <xs:enumeration value="Recevable" />
+            <xs:enumeration value="Irrégulier fond" />
+            <xs:enumeration value="Irrégulier forme" />
+            <xs:enumeration value="Irrégulier fond et forme" />
+            <xs:enumeration value="Rejet Partiel" />
+            <xs:enumeration value="Rejet Total" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:element name="CorrectionDetails" type="tns:CorrectionDetailsType">
+    </xs:element>
+
+    <xs:complexType name="CorrectionDetailsType">
         <xs:sequence>
-        	<xs:element name="CorrectionPart" type="xs:token">
-        		<xs:annotation>
-        			<xs:documentation>
-        				INID Code of the modified data
-        			</xs:documentation>
-        		</xs:annotation>
-        	</xs:element>
-        	<xs:element name="CorrectionText" type="st86:TextType"
-        		minOccurs="0" maxOccurs="unbounded">
-        		<xs:annotation>
-        			<xs:documentation>Free text</xs:documentation>
-        		</xs:annotation>
-        	</xs:element>
-			<xs:element name="DesignDetails" minOccurs="0">
+            <xs:element name="CorrectionPart" type="xs:token">
                 <xs:annotation>
-                	<xs:documentation>Modified designs details</xs:documentation>
+                    <xs:documentation>
+                        INID Code of the modified data
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="CorrectionText" type="st86:TextType" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Free text</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="DesignDetails" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Modified designs details</xs:documentation>
                 </xs:annotation>
                 <xs:complexType>
-					<xs:sequence>
-						<xs:element name="Design" type="st86:DesignType" maxOccurs="unbounded"/>
-					</xs:sequence>
-				</xs:complexType>
-			</xs:element>
-       </xs:sequence>
-	</xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="Design" type="st86:DesignType" maxOccurs="unbounded" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
 
-	<xs:simpleType name="PreferredResponseMethodType">
+    <xs:simpleType name="PreferredResponseMethodType">
         <xs:annotation>
-        	<xs:documentation>preferred response method via e-mail or mail</xs:documentation>
+            <xs:documentation>preferred response method via e-mail or mail</xs:documentation>
         </xs:annotation>
         <xs:restriction base="xs:string">
-			<xs:enumeration value="mail"></xs:enumeration>
-			<xs:enumeration value="email"></xs:enumeration>
-		</xs:restriction>
-	</xs:simpleType>
+            <xs:enumeration value="mail"></xs:enumeration>
+            <xs:enumeration value="email"></xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
 
-	<xs:element name="PreferredResponseMethod"
-		type="tns:PreferredResponseMethodType">
-	</xs:element>
-	
-	<xs:element name="FeePaidAmount" type="st86:AmountType" />
-	<xs:element name="FeeRemainingAmount" type="st86:AmountType" />
-	<xs:element name="minQuantity" type="xs:integer" />
-	<xs:element name="maxQuantity" type="xs:integer" />
+    <xs:element name="PreferredResponseMethod" type="tns:PreferredResponseMethodType" />
+
+    <xs:element name="FeePaidAmount" type="st86:AmountType" />
+    <xs:element name="FeeRemainingAmount" type="st86:AmountType" />
+    <xs:element name="minQuantity" type="xs:integer" />
+    <xs:element name="maxQuantity" type="xs:integer" />
+
+    <xs:element name="PublicDesignEventDetails" type="tns:PublicDesignEventType" />
+
+    <xs:complexType name="PublicDesignEventType">
+        <xs:sequence>
+            <xs:choice minOccurs="0">
+                <xs:element name="EventDate" type="xs:date" />
+                <xs:element name="EventDateTime" type="xs:dateTime" />
+            </xs:choice>
+            <xs:element name="EventCode" type="tns:DesignEventCodeExType" />
+            <xs:element name="HistoryDetails" minOccurs="0">
+                <xs:complexType>
+                    <xs:choice minOccurs="0" maxOccurs="unbounded">
+                        <xs:element name="DesignApplication" type="st86:DesignApplicationType" />
+                        <xs:element name="DesignRecord" type="st86:DesignRecordType" />
+                    </xs:choice>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
 </xs:schema>
